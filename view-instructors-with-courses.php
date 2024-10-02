@@ -6,7 +6,6 @@
 while ($instructor = $instructors->fetch_assoc()) {
   ?>
   <div class="card">
-    <img src="..." class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title"><?php echo $instructor['instructor_name']; ?></h5>
       <p class="card-text">
