@@ -1,6 +1,7 @@
+<h1>hello</h1>
 <?php
 require_once("util-db.php");
-require_once("model-instructors.php")
+require_once("model-instructors.php");
 
 $pageTitle = "Instructors";
 include "view-header.php";
