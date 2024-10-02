@@ -1,3 +1,10 @@
+?>
+<?php
+error_reporting(E_All);
+ini_set('display_errors',1);
+include 'utl-db.php';
+?>
+
 <?php
 $pageTitle = "Home";
 include "view-header.php";
@@ -6,11 +13,5 @@ include "view-header.php";
 <?php
 include "view-footer.php";
 
-?>
-<?php
-error_reporting(E_All);
-ini_set('display_errors',1);
-include 'utl-db.php';
-?>
 
 
