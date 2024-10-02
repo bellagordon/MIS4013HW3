@@ -1,4 +1,4 @@
-?>
+
 <?php
 error_reporting(E_All);
 ini_set('display_errors',1);
@@ -13,5 +13,5 @@ include "view-header.php";
 <?php
 include "view-footer.php";
 
-
+?>
 
