@@ -2,7 +2,7 @@
 require_once("util-db.php");
 require_once("model-sections-by-course.php");
 
-$pageTitle = "Section by course";
+$pageTitle = "Nurses assigned to Patient";
 include "view-header.php";
 $courses = selectSectionsByCourse($_POST['cid']);
 include "view-sections-by-course.php";
