@@ -2,7 +2,7 @@
 function selectInstructors() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT instructor_id, instructor_name, office_number FROM instructor");
+        $stmt = $conn->prepare("SELECT doctor_id, doctor_name, office_number FROM instructor");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
