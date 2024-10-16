@@ -17,9 +17,8 @@
     while ($section = $sections->fetch_assoc()) {
   ?>
   <tr>
-    <td><?php echo $section['patient_id']; ?></td>
-    <td><?php echo $section['patient_name']; ?></td>
-    <td><?php echo $section['patient_description']; ?></td>
+    <td><?php echo $section['nurse_id']; ?></td>
+    <td><?php echo $section['nurse_name']; ?></td>
    
     <td><?php echo $section['room']; ?></td>
     <td><?php echo $section['day_time']; ?></td>
