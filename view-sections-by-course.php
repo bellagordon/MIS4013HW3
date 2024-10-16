@@ -1,4 +1,4 @@
-<h1>Sections by course</h1>
+<h1>Nurses by Patient</h1>
 <div class="table-responsive">
   <table class="table">
     <thead>
