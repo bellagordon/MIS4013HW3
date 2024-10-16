@@ -18,8 +18,8 @@ while ($course = $courses->fetch_assoc()) {
     <td><?php echo $course['patient_name']; ?></td>
     <td><?php echo $course['patient_description']; ?></td>
      <td>
-      <form>
-        <form method="post" action="sections-by-course.php">
+      <form method="post" action="sections-by-course.php">
+        
         <input type = "hidden" name = "cid" value ="<?php echo $course['patient_id']; ?>">
   <button type="submit" class="btn btn-primary">Assigned Nurse</button>
       </form>
