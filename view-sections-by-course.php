@@ -4,9 +4,7 @@
     <thead>
       <tr>
         <th>ID</th>
-      <th>Number</th>
-      <th>Description</th>
-        <th>Semester</th>
+        <th>Name</th>
         <th>Room</th>
         <th>Day / Time</th>
 
@@ -19,7 +17,6 @@
   <tr>
     <td><?php echo $section['nurse_id']; ?></td>
     <td><?php echo $section['nurse_name']; ?></td>
-   
     <td><?php echo $section['room']; ?></td>
     <td><?php echo $section['day_time']; ?></td>
   </tr>
