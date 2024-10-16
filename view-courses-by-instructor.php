@@ -6,9 +6,9 @@
         <th>ID</th>
       <th>Number</th>
       <th>Description</th>
-        <th>Semester</th>
         <th>Room</th>
-        <th>Day / Time</th>
+        <th>Day / Time </th>
+      
 
       </tr>
     </thead>
