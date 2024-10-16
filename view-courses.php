@@ -1,4 +1,4 @@
-<h1>Courses</h1>
+<h1>Patients</h1>
 <div class="table-responsive">
   <table class="table">
     <thead>
