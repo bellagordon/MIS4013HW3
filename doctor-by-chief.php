@@ -4,7 +4,7 @@ require_once("model-doctor-by-chief.php");
 
 $pageTitle = "Doctors by Head Surgeon";
 include "view-header.php";
-$doctor = selectDoctorsbyChief($_GET['id']);
+$doctor = selectDoctorsbyChief($_GET['iid']);
 include "view-doctors-by-chief.php";
 include "view-footer.php";
 ?>
