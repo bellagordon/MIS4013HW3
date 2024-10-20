@@ -14,9 +14,9 @@
 while ($chief = $chiefs->fetch_assoc()) {
   ?>
   <tr>
-   <td><?php echo $chiefs['chief_id']; ?></td>
-    <td><?php echo $chiefs['chief_name']; ?></td>
-    <td><?php echo $chiefs['chief_dpt']; ?></td>
+   <td><?php echo $chief['chief_id']; ?></td>
+    <td><?php echo $chief['chief_name']; ?></td>
+    <td><?php echo $chief['chief_dpt']; ?></td>
      <td>
       
    </td>
