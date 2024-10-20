@@ -11,8 +11,8 @@ while ($chief = $chiefs->fetch_assoc()) {
       <p class="card-text">
       <ul class="list-group">
   <?php
-  $chiefs = selectCoursesByInstructor($instructor['doctor_id']);
-  while ($course = $courses ->fetch_assoc()) {
+  $chiefs = selectChiefs($instructor['doctor_id']);
+  while ($chief = $chiefs ->fetch_assoc()) {
     ?>
       <li class="list-group-item"><?php echo $course['patient_name']; ?> - <?php echo $course['room']; ?> - <?php echo $course['day_time']; ?> </li>
 
