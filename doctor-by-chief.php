@@ -2,9 +2,9 @@
 require_once("util-db.php");
 require_once("model-doctor-by-chief.php");
 
-$pageTitle = "Doctors assigned to Head Surgeon";
+$pageTitle = "Doctors by Head Surgeon";
 include "view-header.php";
-$doctors = selectDoctorsByChief($_POST['cid']);
+$doctor = selectDoctorssbyChief($_GET['id']);
 include "view-doctor-by-chief.php";
 include "view-footer.php";
 ?>
