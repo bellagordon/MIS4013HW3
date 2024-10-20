@@ -12,18 +12,13 @@ while ($chief = $chiefs->fetch_assoc()) {
       <ul class="list-group">
   <?php
   $chiefs = selectChiefs($instructor['doctor_id']);
-  while ($chief = $chiefs ->fetch_assoc()) {
+  while ($instructor = $instructors ->fetch_assoc()) {
     ?>
-      <li class="list-group-item"><?php echo $course['patient_name']; ?> - <?php echo $course['room']; ?> - <?php echo $course['day_time']; ?> </li>
+      <li class="list-group-item"><?php echo $instructor['doctor_name']; ?> </li>
 
     <?php
   }
-  ?>
-      </ul>   
-      </p>
-      <p class="card-text"><small class="text-body-secondary">Office : <?php echo $instructor['office_number']; ?>></p>
-    </div>
-  </div>
+  
  
   <?php
 }
