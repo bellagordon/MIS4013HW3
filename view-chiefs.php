@@ -18,6 +18,11 @@ while ($chief = $chiefs->fetch_assoc()) {
     <td><?php echo $chief['chief_name']; ?></td>
     <td><?php echo $chief['chief_dpt']; ?></td>
      <td>
+ <form method="post" action="doctor-by-chief.php">
+        
+        <input type = "hidden" name = "cid" value ="<?php echo $chief['doctor_id']; ?>">
+  <button type="submit" class="btn btn-primary">Assigned Doctor</button>
+      </form>
        
    </td>
   </tr>
