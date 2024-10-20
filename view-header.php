@@ -26,6 +26,9 @@
           <a class="nav-link" href="courses.php">Patients</a>
         </li>  <li class="nav-item">
           <a class="nav-link" href="instructor-with-courses.php">Doctors with Patients</a>
+           <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="chiefs.php">Head Surgeons with Doctors</a>
+        </li>
       </ul>
     </div>
   </div>
