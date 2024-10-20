@@ -1,5 +1,5 @@
 <?php
-function selectDoctorbyChief($iid) {
+function selectDoctorsbyChief($iid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT i.doctor_id, doctor_name FROM instructor i join chief c on c.doctor_id = i.doctor_id where c.chief_id=?");
