@@ -45,7 +45,7 @@ function deleteCourse($cid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("DELETE FROM `hw3_database`.`course` WHERE patient_id = ?");
-        $stmt->bind_param("i",$cid;
+        $stmt->bind_param("i",$cid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
