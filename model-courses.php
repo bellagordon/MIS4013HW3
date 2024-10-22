@@ -27,7 +27,7 @@ function insertCourse($cName, $cDesc) {
     }
 }
 
-function updateCourse($cName, $cDesc, $cid) {
+function editCourse($cName, $cDesc, $cid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE `hw3_database`.`course` set `patient_name` = ?, `patient_description` = ?  WHERE patient_id =?");
