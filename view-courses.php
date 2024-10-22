@@ -5,7 +5,7 @@
   <div class="col-auto">
     <?php 
   include "view-courses-newform.php";
-  ?>
+      ?>
   </div>
 </div>
 
@@ -31,6 +31,9 @@ while ($course = $courses->fetch_assoc()) {
     <td><?php echo $course['patient_name']; ?></td>
     <td><?php echo $course['patient_description']; ?></td>
      <td>
+        <?php 
+  include "view-courses-editform.php";
+        ?>
      </td>
     <td> 
       <form method="post" action="">
