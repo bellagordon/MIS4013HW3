@@ -18,6 +18,7 @@
       <th>Name</th>
       <th>Office</th>
         <th></th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
