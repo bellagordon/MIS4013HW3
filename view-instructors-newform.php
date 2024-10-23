@@ -21,8 +21,8 @@
               <input type="text" class="form-control" id="iName" name="iName">
             </div>
            <div class="mb-3">
-              <label for="iDesc" class="form-label">Office Number</label>
-              <input type="text" class="form-control" id="iDesc" name="iDesc">
+              <label for="iNum" class="form-label">Office Number</label>
+              <input type="text" class="form-control" id="iNum" name="iNum">
             </div>
               <input type ="hidden" name="actionType" value="Add">
             <button type="submit" class="btn btn-primary">Save</button>
