@@ -4,7 +4,7 @@
   </div>
   <div class="col-auto">
     <?php 
-  include "view-sections-newform.php";
+  include "view-instructors-with-courses-newform.php";
       ?>
   </div>
 </div>
@@ -25,7 +25,7 @@ while ($instructor = $instructors->fetch_assoc()) {
     ?>
       <li class="list-group-item"><?php echo $course['patient_name']; ?> - <?php echo $course['room']; ?> - <?php echo $course['day_time']; ?> -
            <?php 
-  include "view-sections-editform.php";
+  include "view-instructors-with-courses-editform.php";
         ?>
      
       <form method="post" action="">
