@@ -5,11 +5,11 @@
 </button>
 
 
-<div class="modal fade" id="editSectionModal <?php echo $course['doctor_id']; ?>" tabindex="-1" aria-labelledby="editInstructorModalLabel <?php echo $instructor['doctor_id']; ?>" aria-hidden="true">
+<div class="modal fade" id="editSectionModal<?php echo $course['doctor_id']; ?>" tabindex="-1" aria-labelledby="editInstructorModalLabel<?php echo $instructor['doctor_id']; ?>" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="editSectionModalLabel <?php echo $section['nurse_id']; ?>">Edit Patient and Doctor</h1>
+        <h1 class="modal-title fs-5" id="editSectionModalLabel<?php echo $section['nurse_id']; ?>">Edit Patient and Doctor</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -32,7 +32,7 @@
               <label for="time <?php echo $section['day_time']; ?>" class="form-label">Date and Time</label>
               <input type="text" class="form-control" id="time <?php echo $section['nurse_id']; ?>" name="time" value = "<?php echo $section['doctor_id']; ?>" >
             </div>
-             <input type="hidden" name="sid"> value = "<?php echo $section['nurse_id']; ?>" >
+             <input type="hidden" name="sid" value = "<?php echo $section['nurse_id']; ?>" >
               <input type ="hidden" name="actionType" value="Edit">
             <button type="submit" class="btn btn-primary">Save</button>
        </form>
