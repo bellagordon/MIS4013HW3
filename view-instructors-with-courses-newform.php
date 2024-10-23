@@ -10,18 +10,28 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="newSectionModalLabel">New Patient</h1>
+        <h1 class="modal-title fs-5" id="newSectionModalLabel">New Nurse for Patient and Doctor</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <form method="post" action="">
             <div class="mb-3">
-              <label for="cName" class="form-label">Patient Name</label>
-              <input type="text" class="form-control" id="cName" name="cName">
+              <label for="iid" class="form-label">Doctor</label>
+              <input type="text" class="form-control" id="iid" name="iid">
             </div>
            <div class="mb-3">
-              <label for="cDesc" class="form-label">Patient Description</label>
+              <label for="cid" class="form-label">Patient</label>
+              <input type="text" class="form-control" id="cid" name="cid">
+            </div>
+              <div class="mb-3">
+              <label for="sName" class="form-label">Nurse name</label>
               <input type="text" class="form-control" id="cDesc" name="cDesc">
+            </div><div class="mb-3">
+              <label for="room" class="form-label">Patient Room</label>
+              <input type="text" class="form-control" id="room" name="room">
+            </div><div class="mb-3">
+              <label for="time" class="form-label">Date and Time</label>
+              <input type="text" class="form-control" id="time" name="time">
             </div>
               <input type ="hidden" name="actionType" value="Add">
             <button type="submit" class="btn btn-primary">Save</button>
