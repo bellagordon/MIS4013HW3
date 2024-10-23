@@ -22,7 +22,7 @@
               <label for="iNum <?php echo $instructor['office_number']; ?>" class="form-label">Office Number</label>
               <input type="text" class="form-control" id="iNum <?php echo $instructor['doctor_id']; ?>" name="iNum" value = "<?php echo $instructor['office_number']; ?>" >
             </div>
-             <input type="hidden" name="iid"> value = "<?php echo $course['doctor_id']; ?>" >
+             <input type="hidden" name="iid" value = "<?php echo $instructor['doctor_id']; ?>" >
               <input type ="hidden" name="actionType" value="Edit">
             <button type="submit" class="btn btn-primary">Save</button>
        </form>
