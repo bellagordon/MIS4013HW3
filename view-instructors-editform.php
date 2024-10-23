@@ -16,11 +16,11 @@
         <form method="post" action="">
             <div class="mb-3">
               <label for="iName <?php echo $course['doctor_id']; ?>" class="form-label">Doctor Name</label>
-              <input type="text" class="form-control" id="iName <?php echo $instructor ['doctor_id']; ?>" name="iName" value="<?php echo $course['doctor_name']; ?>" >
+              <input type="text" class="form-control" id="iName <?php echo $instructor ['doctor_id']; ?>" name="iName" value="<?php echo $instructor['doctor_name']; ?>" >
             </div>
            <div class="mb-3">
               <label for="iNum <?php echo $course['office_number']; ?>" class="form-label">Office Number</label>
-              <input type="text" class="form-control" id="iNum <?php echo $instructor['doctor_id']; ?>" name="iNum" value = "<?php echo $course['office_number']; ?>" >
+              <input type="text" class="form-control" id="iNum <?php echo $instructor['doctor_id']; ?>" name="iNum" value = "<?php echo $instructor['office_number']; ?>" >
             </div>
              <input type="hidden" name="iid"> value = "<?php echo $course['doctor_id']; ?>" >
               <input type ="hidden" name="actionType" value="Edit">
