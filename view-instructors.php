@@ -4,7 +4,7 @@
   </div>
   <div class="col-auto">
     <?php 
-  include "view-instructor-newform.php";
+  include "view-instructors-newform.php";
       ?>
   </div>
 </div>
@@ -30,7 +30,7 @@ while ($instructor = $instructors->fetch_assoc()) {
     <td><?php echo $instructor['office_number']; ?></td>
     <td>
         <?php 
-  include "view-courses-editform.php";
+  include "view-instuctors-editform.php";
         ?>
     </td>
     <td> 
