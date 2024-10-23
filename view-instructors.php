@@ -30,7 +30,7 @@ while ($instructor = $instructors->fetch_assoc()) {
     <td><?php echo $instructor['office_number']; ?></td>
     <td>
         <?php 
-  include "view-instuctors-editform.php";
+  include "view-instructors-editform.php";
         ?>
     </td>
     <td> 
