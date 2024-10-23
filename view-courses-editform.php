@@ -24,7 +24,7 @@
               <label for="cDesc <?php echo $course['patient_id']; ?>" class="form-label">Patient Description</label>
               <input type="text" class="form-control" id="cDesc <?php echo $course['patient_id']; ?>" name="cDesc" value = "<?php echo $course['patient_description']; ?>" >
             </div>
-             <input type="hidden" name="cid"> value = "<?php echo $course['patient_id']; ?>" >
+             <input type="hidden" name="cid" value = "<?php echo $course['patient_id']; ?>" >
               <input type ="hidden" name="actionType" value="Edit">
             <button type="submit" class="btn btn-primary">Save</button>
        </form>
