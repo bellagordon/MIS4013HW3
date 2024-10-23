@@ -13,11 +13,11 @@ function selectInstructors() {
     }
 }
 
-function insertInstructor($iName, $iDesc) {
+function insertInstructor($iName, $iNum) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `hw3_database`.`instructor` (`doctor_name`, `office_number`) VALUES ( ?, ?)");
-        $stmt->bind_param("ss", $cName, $cDesc);
+        $stmt->bind_param("ss", $iName, $iNum);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -27,11 +27,11 @@ function insertInstructor($iName, $iDesc) {
     }
 }
 
-function editCourse($cName, $cDesc, $cid) {
+function editInstructor($iName, $iNum, $iid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("UPDATE `hw3_database`.`course` set `patient_name` = ?, `patient_description` = ?  WHERE patient_id =?");
-        $stmt->bind_param("ssi",$cName, $cDesc, $cid);
+        $stmt = $conn->prepare("UPDATE `hw3_database`.`instructor` set `doctor_name` = ?, `office_number` = ?  WHERE doctor_id =?");
+        $stmt->bind_param("ssi",$iName, $iNum, $iid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -41,11 +41,11 @@ function editCourse($cName, $cDesc, $cid) {
     }
 }
 
-function deleteCourse($cid) {
+function deleteInstructor($iid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("DELETE FROM `hw3_database`.`course` WHERE patient_id = ?");
-        $stmt->bind_param("i",$cid);
+        $stmt = $conn->prepare("DELETE FROM `hw3_database`.`instructor` WHERE doctor_id = ?");
+        $stmt->bind_param("i",$iid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
