@@ -53,9 +53,3 @@ while ($instructor = $instructors->fetch_assoc()) {
     </tbody>
   </table>
 </div>
-  <?php
-}
-        ?>
-    </tbody>
-  </table>
-</div>
