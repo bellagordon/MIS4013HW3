@@ -15,14 +15,24 @@
       <div class="modal-body">
         <form method="post" action="">
             <div class="mb-3">
-              <label for="iName <?php echo $instructor['doctor_id']; ?>" class="form-label">Doctor Name</label>
-              <input type="text" class="form-control" id="iName <?php echo $instructor ['doctor_id']; ?>" name="iName" value="<?php echo $instructor['doctor_name']; ?>" >
+              <label for="iid <?php echo $section['doctor_id']; ?>" class="form-label">Doctor</label>
+              <input type="text" class="form-control" id="iid <?php echo $section ['nurse_id']; ?>" name="iid" value="<?php echo $section['doctor_id']; ?>" >
             </div>
            <div class="mb-3">
-              <label for="iNum <?php echo $instructor['office_number']; ?>" class="form-label">Office Number</label>
-              <input type="text" class="form-control" id="iNum <?php echo $instructor['doctor_id']; ?>" name="iNum" value = "<?php echo $instructor['office_number']; ?>" >
+              <label for="cid <?php echo $section['patient_id']; ?>" class="form-label">Patient</label>
+              <input type="text" class="form-control" id="cid <?php echo $section['nurse_id']; ?>" name="cid" value = "<?php echo $section['doctor_id']; ?>" >
             </div>
-             <input type="hidden" name="iid"> value = "<?php echo $course['doctor_id']; ?>" >
+               <div class="mb-3">
+              <label for="sName <?php echo $section['nurse_name']; ?>" class="form-label">Nurse Name</label>
+              <input type="text" class="form-control" id="sName <?php echo $section['nurse_id']; ?>" name="sName" value = "<?php echo $section['doctor_id']; ?>" >
+            </div> <div class="mb-3">
+              <label for="room <?php echo $section['room']; ?>" class="form-label">Room</label>
+              <input type="text" class="form-control" id="room <?php echo $section['nurse_id']; ?>" name="room" value = "<?php echo $section['doctor_id']; ?>" >
+            </div> <div class="mb-3">
+              <label for="time <?php echo $section['day_time']; ?>" class="form-label">Date and Time</label>
+              <input type="text" class="form-control" id="time <?php echo $section['nurse_id']; ?>" name="time" value = "<?php echo $section['doctor_id']; ?>" >
+            </div>
+             <input type="hidden" name="sid"> value = "<?php echo $section['nurse_id']; ?>" >
               <input type ="hidden" name="actionType" value="Edit">
             <button type="submit" class="btn btn-primary">Save</button>
        </form>
