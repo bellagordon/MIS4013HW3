@@ -1,4 +1,13 @@
-<h1>Doctors with Patients</h1>
+<div class="row">
+  <div class="col">
+    <h1>Doctors</h1>
+  </div>
+  <div class="col-auto">
+    <?php 
+  include "view-instructors-newform.php";
+      ?>
+  </div>
+</div>
 <div class="card-group">
 
 
