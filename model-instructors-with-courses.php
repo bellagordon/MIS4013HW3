@@ -32,7 +32,7 @@ function insertSection($iid, $cid, $sName, $room, $time) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `hw3_database`.`section` (`doctor_id`, `patient_id`, 'nurse_name', 'room', 'day_time') VALUES ( ?, ?)");
-        $stmt->bind_param("iisss", $iid, $cid, $sName $room $time);
+        $stmt->bind_param("iisss", $iid, $cid, $sName, $room, $time);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -42,11 +42,11 @@ function insertSection($iid, $cid, $sName, $room, $time) {
     }
 }
 
-function editSection($iid, $cid, $sName $room $time) {
+function editSection($iid, $cid, $sName, $room, $time) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE `hw3_database`.`section` set `doctor_id` = ?, `patient_id` = ?, 'nurse_name' = ?, 'room' = ?, 'day_time' =?  WHERE doctor_id =? AND patient_id =?");
-        $stmt->bind_param("iisssi",$iid, $cid, $sName $room $time);
+        $stmt->bind_param("iisssi",$iid, $cid, $sName, $room, $time);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -60,7 +60,7 @@ function deleteInstructor($sid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("DELETE FROM `hw3_database`.`section` WHERE nurse_id = ?");
-        $stmt->bind_param("i",$iid);
+        $stmt->bind_param("i",$sid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
