@@ -56,7 +56,7 @@ function editSection($iid, $cid, $sName, $room, $time) {
     }
 }
 
-function deleteInstructor($sid) {
+function deleteSection($sid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("DELETE FROM `hw3_database`.`section` WHERE nurse_id = ?");
