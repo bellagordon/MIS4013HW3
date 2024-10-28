@@ -25,7 +25,7 @@
             </div>
               <div class="mb-3">
               <label for="sName" class="form-label">Nurse name</label>
-              <input type="text" class="form-control" id="cDesc" name="cDesc">
+              <input type="text" class="form-control" id="sName" name="sName">
             </div><div class="mb-3">
               <label for="room" class="form-label">Patient Room</label>
               <input type="text" class="form-control" id="room" name="room">
