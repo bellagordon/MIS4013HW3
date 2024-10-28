@@ -31,7 +31,7 @@ if (isset($_POST['actionType'])) {
   }
 }
 
-$instructors = selectInstructors();
+$sections = selectSections();
 include "view-instructors-with-courses.php";
 include "view-footer.php";
 ?>
