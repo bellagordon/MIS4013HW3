@@ -45,7 +45,7 @@ function deleteChief($chid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("DELETE FROM `hw3_database`.`chief` WHERE chief_id = ?");
-        $stmt->bind_param("i",$cid);
+        $stmt->bind_param("i",$chid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
