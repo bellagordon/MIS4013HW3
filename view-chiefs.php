@@ -33,7 +33,7 @@ while ($chief = $chiefs->fetch_assoc()) {
     <td></td>    
     <td></td>
 
-     <td>  
+    
     <td>
         <?php 
   include "view-chiefs-editform.php";
@@ -50,7 +50,7 @@ while ($chief = $chiefs->fetch_assoc()) {
         </button>
       </form>
     </td>
-  </td>
+  <td>
  <form method="post" action="doctor-by-chief.php">
         
         <input type = "hidden" name = "cid" value ="<?php echo $chief['chief_id']; ?>">
