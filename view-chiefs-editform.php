@@ -21,7 +21,8 @@
            <div class="mb-3">
               <label for="chDpt <?php echo $chief['chief_dpt']; ?>" class="form-label">Department</label>
               <input type="text" class="form-control" id="chDpt <?php echo $chief['chief_id']; ?>" name="chDpt" value = "<?php echo $chief['chief_dpt']; ?>" >
-             <input type="hidden" name="iid" value = "<?php echo $chief['chief_id']; ?>" >
+                  
+             <input type="hidden" name="chid" value = "<?php echo $chief['chief_id']; ?>" >
               <input type ="hidden" name="actionType" value="Edit">
             <button type="submit" class="btn btn-primary">Save</button>
        </form>
