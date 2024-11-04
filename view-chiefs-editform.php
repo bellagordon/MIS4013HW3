@@ -21,11 +21,6 @@
            <div class="mb-3">
               <label for="chDpt <?php echo $chief['chief_dpt']; ?>" class="form-label">Department</label>
               <input type="text" class="form-control" id="chDpt <?php echo $chief['chief_id']; ?>" name="chDpt" value = "<?php echo $chief['chief_dpt']; ?>" >
-            </div>
-              <div class="mb-3">
-              <label for="iid <?php echo $chief['doctor_id']; ?>" class="form-label">Docor ID</label>
-              <input type="text" class="form-control" id="iid <?php echo $chief['chief_id']; ?>" name="iid" value = "<?php echo $chief['doctor_id']; ?>" >
-            </div>
              <input type="hidden" name="iid" value = "<?php echo $chief['chief_id']; ?>" >
               <input type ="hidden" name="actionType" value="Edit">
             <button type="submit" class="btn btn-primary">Save</button>
