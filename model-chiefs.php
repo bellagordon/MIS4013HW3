@@ -17,7 +17,7 @@ function insertChief($chName, $chDpt) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `hw3_database`.`chief` (`chief_name`, `chief_dpt`) VALUES ( ?, ?)");
-        $stmt->bind_param("ss", $iid, $chName, $chDpt);
+        $stmt->bind_param("ss", $chName, $chDpt);
         $success = $stmt->execute();
         $conn->close();
         return $success;
