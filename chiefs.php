@@ -15,14 +15,14 @@ if (isset($_POST['actionType'])) {
       }
       break;
      case "Edit":
-      if (editChief($_POST['iid'],$_POST['chName'], $_POST['chDpt'], $_POST['chid'])) {
+      if (editChief($_POST['iid'], $_POST['chName'], $_POST['chDpt'], $_POST['chid'])) {
         echo '<div class="alert alert-success" role="alert"> Chief surgeon edited! </div>';
       } else {
          echo '<div class="alert alert-danger" role="alert"> Error </div>';
       }
       break;
      case "Delete":
-      if (deleteCourse($_POST['chid'])) {
+      if (deleteChief($_POST['chid'])) {
         echo '<div class="alert alert-success" role="alert"> Chief surgeon deleted! </div>';
       } else {
          echo '<div class="alert alert-danger" role="alert"> Error </div>';
