@@ -16,7 +16,7 @@ function selectChiefs() {
 function insertChief($iid, $chName, $chDpt) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `hw3_database`.`chief` (`doctor_id`, `patient_name`, `patient_description`) VALUES ( ?, ?)");
+        $stmt = $conn->prepare("INSERT INTO `hw3_database`.`chief` (`doctor_id`, `patient_name`, `patient_description`) VALUES ( ?, ?, ?)");
         $stmt->bind_param("ss", $iid, $chName, $chDpt);
         $success = $stmt->execute();
         $conn->close();
