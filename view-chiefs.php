@@ -29,6 +29,10 @@ while ($chief = $chiefs->fetch_assoc()) {
    <td><?php echo $chief['chief_id']; ?></td>
     <td><?php echo $chief['chief_name']; ?></td>
     <td><?php echo $chief['chief_dpt']; ?></td>
+    <td></td>
+    <td></td>    
+    <td></td>
+
      <td>  
     <td>
         <?php 
@@ -46,6 +50,7 @@ while ($chief = $chiefs->fetch_assoc()) {
         </button>
       </form>
     </td>
+  </td>
  <form method="post" action="doctor-by-chief.php">
         
         <input type = "hidden" name = "cid" value ="<?php echo $chief['chief_id']; ?>">
