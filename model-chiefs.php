@@ -13,7 +13,7 @@ function selectChiefs() {
     }
 }
 
-function insertChief($iid, $chName, $chDpt) {
+function insertChief($chName, $chDpt, $iid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `hw3_database`.`chief` (`doctor_id`, `patient_name`, `patient_description`) VALUES ( ?, ?, ?)");
@@ -27,10 +27,10 @@ function insertChief($iid, $chName, $chDpt) {
     }
 }
 
-function editChief($chName, $chDpt, $chid) {
+function editChief($chName, $chDpt, $iid, $chid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("UPDATE `hw3_database`.`chief` set `doctor_id`=?, `chief_name` = ?, `chief_dpt` = ?  WHERE chief_id =?");
+        $stmt = $conn->prepare("UPDATE `hw3_database`.`chief` set `chief_name` = ?, `chief_dpt` = ?, `doctor_id`=? WHERE chief_id =?");
         $stmt->bind_param("ssi", $iid, $chName, $chDpt, $chid);
         $success = $stmt->execute();
         $conn->close();
