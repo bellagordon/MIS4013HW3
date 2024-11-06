@@ -21,7 +21,7 @@ while ($instructor = $instructors->fetch_assoc()) {
   ?>
       </ul>   
       </p>
-      <p class="card-text"><small class="text-body-secondary">Office : <?php echo $instructor['office_number']; ?>></p>
+      <p class="card-text"><small class="text-body-secondary">Office : <?php echo $instructor['office_number']; ?></p>
     </div>
   </div>
  
