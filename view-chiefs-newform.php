@@ -17,7 +17,7 @@
       <div class="modal-body">
         <form method="post" action="">
             <div class="mb-3">
-              <label for="chName" class="form-label"> Head Surgeon Name</label>
+              <label for="chName" class="form-label">Head Surgeon Name</label>
               <input type="text" class="form-control" id="chName" name="chName">
             </div>
            <div class="mb-3">
