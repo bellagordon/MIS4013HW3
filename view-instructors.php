@@ -47,7 +47,7 @@ while ($instructor = $instructors->fetch_assoc()) {
         </button>
       </form>
     </td>
-   <td><a href="courses-by-instructor.php" id="<?php echo $instructor['doctor_id']; ?>">Doctors</a>
+   <td><a href="sections-by-course" id="<?php echo $section['doctor_id']; ?>">Assigned Nurse</a>
    </td>
   </tr>
   <?php
