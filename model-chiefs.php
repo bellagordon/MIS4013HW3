@@ -12,6 +12,33 @@ function selectChiefs() {
         throw $e;
     }
 }
+function selectChiefsForInput() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT chief_id, chief_name FROM chief order by chief_name");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function selectInstructorsForInput() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT doctor_id, doctor_name, office_number FROM instructor order by doctor_name");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
 
 function insertChief($chName, $chDpt) {
     try {
