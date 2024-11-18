@@ -23,6 +23,15 @@
            <div class="mb-3">
               <label for="chDpt" class="form-label">Department</label>
               <input type="text" class="form-control" id="chDpt" name="chDpt">
+           </div>
+              <div class="mb-3">
+              <label for="iid" class="form-label">Doctor</label>
+              <?php
+              $instructorList = selectInstructorForInput();
+                  include "view-instructor-input-list.php"
+              ?>
+                              
+              </div>
               <input type ="hidden" name="actionType" value="Add">
             <button type="submit" class="btn btn-primary">Save</button>
        </form>
