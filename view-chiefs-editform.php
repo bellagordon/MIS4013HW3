@@ -16,7 +16,11 @@
         <form method="post" action="">
             <div class="mb-3">
               <label for="chName <?php echo $chief['chief_id']; ?>" class="form-label">Head Surgeon Name</label>
-              <input type="text" class="form-control" id="chName <?php echo $chief['chief_id']; ?>" name="chName" value="<?php echo $chief['chief_name']; ?>" >
+             <?php
+              $instructorList = selectInstructorsForInput();
+              $selectedInstructor = $chief['doctor_id'];
+                  include "view-instructor-input-list.php"
+              ?>
             </div>
            <div class="mb-3">
               <label for="chDpt <?php echo $chief['chief_dpt']; ?>" class="form-label">Department</label>
