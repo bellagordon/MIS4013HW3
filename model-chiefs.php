@@ -40,11 +40,11 @@ function selectInstructorsForInput() {
     }
 }
 
-function insertChief($chName, $chDpt) {
+function insertChief($chName, $chDpt, $iid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `hw3_database`.`chief` (`chief_name`, `chief_dpt`) VALUES ( ?, ?)");
-        $stmt->bind_param("ss", $chName, $chDpt);
+        $stmt = $conn->prepare("INSERT INTO `hw3_database`.`chief` (`chief_name`, `chief_dpt`, 'doctor_id') VALUES ( ?, ?)");
+        $stmt->bind_param("ss", $chName, $chDpt, $iid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -54,11 +54,11 @@ function insertChief($chName, $chDpt) {
     }
 }
 
-function editChief($chName, $chDpt, $chid) {
+function editChief($chName, $chDpt, $chid, $iid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("UPDATE `hw3_database`.`chief` set `chief_name` = ?, `chief_dpt` = ? WHERE chief_id =?");
-        $stmt->bind_param("ssi", $chName, $chDpt, $chid);
+        $stmt = $conn->prepare("UPDATE `hw3_database`.`chief` set `chief_name` = ?, `chief_dpt` = ?, `doctor_id` = ?  WHERE chief_id =?");
+        $stmt->bind_param("ssi", $chName, $chDpt, $chid, $iid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
