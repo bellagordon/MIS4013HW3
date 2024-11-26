@@ -1,4 +1,5 @@
 
+
 <h1>Doctors by Head Surgeon</h1>
 <div class="table-responsive">
   <table class="table">
@@ -15,8 +16,8 @@
     while ($doctor = $doctors->fetch_assoc()) {
   ?>
   <tr>
-    <td><?php echo $doctors['doctor_id']; ?></td>
-    <td><?php echo $doctors['doctor_name']; ?></td>
+    <td><?php echo $doctor['doctor_id']; ?></td>
+    <td><?php echo $doctor['doctor_name']; ?></td>
    
   </tr>
   <?php
