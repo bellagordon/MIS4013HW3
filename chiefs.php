@@ -15,7 +15,7 @@ if (isset($_POST['actionType'])) {
       }
       break;
      case "Edit":
-      if (editChief($_POST['chName'], $_POST['chDpt'], $_POST['chid'], , $_POST['iid'])) {
+      if (editChief($_POST['chName'], $_POST['chDpt'], $_POST['chid'], $_POST['iid'])) {
         echo '<div class="alert alert-success" role="alert"> Chief surgeon edited! </div>';
       } else {
          echo '<div class="alert alert-danger" role="alert"> Error </div>';
