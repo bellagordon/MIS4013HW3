@@ -24,7 +24,7 @@
               <input type="text" class="form-control" id="chDpt <?php echo $chief['chief_id']; ?>" name="chDpt" value = "<?php echo $chief['chief_dpt']; ?>" >
            </div>
               <div class="mb-3">
-              <label for="chDpt <?php echo $chief['doctor_id']; ?>" class="form-label">Doctor</label>
+              <label for="iid <?php echo $chief['doctor_id']; ?>" class="form-label">Doctor</label>
               <?php
               $instructorList = selectInstructorsForInput();
               $selectedInstructor = 0;
