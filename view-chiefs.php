@@ -53,7 +53,7 @@ while ($chief = $chiefs->fetch_assoc()) {
   <td>
  <form method="post" action="doctor-by-chief.php">
         
-        <input type = "hidden" name = "chid" value ="<?php echo $chief['chief_id']; ?>">
+        <input type = "hidden" name = "cid" value ="<?php echo $chief['chief_id']; ?>">
   <button type="submit" class="btn btn-primary">Assigned Doctor</button>
       </form>
        
