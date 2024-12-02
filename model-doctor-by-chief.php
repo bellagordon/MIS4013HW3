@@ -14,4 +14,13 @@ function selectDoctorsbyChief($cid) {
     }
 }
 
+function selectInstructorsForInput() {
+    $conn = get_db_connection();
+    $stmt = $conn->prepare("SELECT doctor_id, doctor_name FROM instructor");
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $conn->close();
+    return $result;
+}
+
 ?>
