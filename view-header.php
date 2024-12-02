@@ -29,7 +29,7 @@
            <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="chiefs.php">Head Surgeons with Doctors</a>
               <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="courses-by-instructor">Patients by Doctor</a>
+          <a class="nav-link active" aria-current="page" href="courses-by-instructor.php">Patients by Doctor</a>
           </li>
         </li>
       </ul>
