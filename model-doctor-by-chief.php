@@ -23,4 +23,19 @@ function selectInstructorsForInput() {
     return $result;
 }
 
+function updateChiefDoctor($chid, $iid) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("UPDATE chief SET doctor_id = ? WHERE chief_id = ?");
+        $stmt->bind_param("ii", $chid, $iid);
+        $stmt->execute();
+        $conn->close();
+        return $stmt->affected_rows; // Returns the number of affected rows
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+
 ?>
