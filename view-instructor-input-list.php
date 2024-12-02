@@ -1,4 +1,4 @@
-   <select class="form-select" id="iid" name="iid">
+<select class="form-select" id="iid_<?php echo $chief['chief_id']; ?>" name="iid">
   <?php
   while ($instructorItem = $instructorList -> fetch_assoc()) {
      $selText = "";
