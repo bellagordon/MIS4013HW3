@@ -5,7 +5,7 @@ include "view-header.php";
 
 <style>
     body {
-        font-family: Arial, sans-serif;
+        font-family: 'Roboto', sans-serif;
         margin: 0;
         padding: 0;
         background: url('https://i.pinimg.com/originals/7d/53/62/7d5362a6efbc8d8b5c1f6b7492e4d20a.jpg') no-repeat center center fixed;
@@ -20,7 +20,7 @@ include "view-header.php";
     }
 
     .hero, .features, .cta {
-        background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+        background-color: rgba(255, 255, 255, 0.8); 
         border-radius: 10px;
         padding: 20px;
         margin-bottom: 20px;
@@ -42,10 +42,10 @@ include "view-header.php";
         color: #333;
     }
 
-
     .cta {
         text-align: center;
         font-size: 1.5em;
+        margin-top: 20px; /* Add this line to reduce space */
     }
 
     .cta a {
@@ -57,16 +57,13 @@ include "view-header.php";
     .cta a:hover {
         text-decoration: underline;
     }
-    
+
     .schedule-heading {
         font-weight: bold;
-        font-size: 1.50em; 
+        font-size: 1.50em;
+        margin-top: 20px; /* Add margin-top to reduce the space between sections */
     }
 </style>
-
-
-</style>
-
 
 <div class="container">
     <header class="hero">
@@ -76,10 +73,11 @@ include "view-header.php";
     <main>
         <section class="cta">
             <p>Start by navigating to the <a href="courses.php">Patients</a> or <a href="instructor.php">Doctors</a> sections.</p>
-            <p class="schedule-heading">Today's Schedule</p>        
+            <p class="schedule-heading">Today's Schedule</p>
+        </section> 
         <section>
-        <?php include "timesheet.php"; ?>
-    </section>
+            <?php include "timesheet.php"; ?>
+        </section>
     </main>
 </div>
 
