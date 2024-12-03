@@ -24,7 +24,8 @@
            <div class="mb-3">
               <label for="iNum" class="form-label">Office Number</label>
               <input type="text" class="form-control" id="iNum" name="iNum">
-
+            <div class="mb-3">
+              <label for="iid" class="form-label">Doctor</label>
                   <?php
               $patientList = selectPatientsForInput();
               $selectedPatient = 0;
