@@ -38,29 +38,14 @@ include "view-header.php";
     }
 
     .hero p {
-        font-size: 1.2em;
+        font-size: 1.5em;
         color: #333;
     }
 
-    .features h2 {
-        font-size: 1.8em;
-        color: #0056b3;
-    }
-
-    .features ul {
-        list-style-type: none;
-        padding: 0;
-    }
-
-    .features li {
-        background-color: rgba(240, 240, 240, 0.9); /* Light gray with transparency */
-        margin: 5px 0;
-        padding: 10px;
-        border-radius: 5px;
-    }
 
     .cta {
         text-align: center;
+        font-size: 1.5em;
     }
 
     .cta a {
@@ -79,11 +64,10 @@ include "view-header.php";
         <h1>Seattle Grace Hospital Database</h1>
         <p>Welcome to the centralized database for managing doctor and patient information</p>
     </header>
-
     <main>
-
         <section class="cta">
             <p>Start by navigating to the <a href="patients.php">Patients</a> or <a href="doctors.php">Doctors</a> sections.</p>
+            <p>Today's Schedule</p>
         </section>
     </main>
 </div>
