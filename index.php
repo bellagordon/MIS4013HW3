@@ -4,21 +4,19 @@ include "view-header.php";
 ?>
 
 <style>
-    body {
-        font-family: Arial, sans-serif;
+
+    .card {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+        font-family: Georgia, serif;
         margin: 0;
         padding: 0;
         background-color: #f8f9fa;
         color: #333;
     }
 
-    .container {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 20px;
-    }
-
-    .hero {
+    .text {
         text-align: center;
         padding: 30px 0;
         background-color: #007bff;
@@ -26,12 +24,12 @@ include "view-header.php";
         border-radius: 5px;
     }
 
-    .hero h1 {
+    .text h1 {
         font-size: 2.5em;
         margin: 0;
     }
 
-    .hero p {
+    .text p {
         font-size: 1.2em;
     }
 
@@ -72,8 +70,8 @@ include "view-header.php";
     }
 </style>
 
-<div class="container">
-    <header class="hero">
+<div class="card">
+    <header class="text">
         <h1>Seattle Grace Hospital Database</h1>
         <p>Welcome to the centralized database for managing doctor and patient information</p>
     </header>
