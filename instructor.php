@@ -9,14 +9,14 @@ include "view-header.php";
 if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']) {
     case "Add":
-      if (insertInstructor($_POST['iName'], $_POST['iNum', $_POST['sid']])) {
+      if (insertInstructor($_POST['iName'], $_POST['iNum'], $_POST['cid'])) {
         echo '<div class="alert alert-success" role="alert"> Doctor added! </div>';
       } else {
          echo '<div class="alert alert-danger" role="alert"> Error </div>';
       }
       break;
      case "Edit":
-      if (editInstructor($_POST['iName'], $_POST['iNum'], $_POST['iid'])) {
+      if (editInstructor($_POST['iName'], $_POST['iNum'], $_POST['iid'], $_POST['cid'])) {
         echo '<div class="alert alert-success" role="alert"> Doctor edited! </div>';
       } else {
          echo '<div class="alert alert-danger" role="alert"> Error </div>';
