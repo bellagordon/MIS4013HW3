@@ -4,16 +4,8 @@ $pageTitle = "Home";
 include "view-header.php";
 ?>
 <html>
-    <head>
+
 <style>
-    body {
-        font-family: 'Roboto', sans-serif;
-        margin: 0;
-        padding: 0;
-        background: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fillustrations%2Fplain-blue-background&psig=AOvVaw31hyAIzi_IbeA0zOUMedHx&ust=1733279360260000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNjPnffGiooDFQAAAAAdAAAAABAE') no-repeat center center fixed;
-        background-size: cover;
-        color: #333;
-    }
 
     .container {
         max-width: 1000px;
@@ -21,7 +13,7 @@ include "view-header.php";
         padding: 20px;
     }
 
-    .hero, .features, .cta {
+    .hero, .cta {
         background-color: rgba(255, 255, 255, 0.8); 
         border-radius: 10px;
         padding: 20px;
@@ -65,8 +57,7 @@ include "view-header.php";
         font-size: 1.50em;
     }
 </style>
-</head>
-<body>
+
 <div class="container">
     <header class="hero">
         <h1>Seattle Grace Hospital Database</h1>
