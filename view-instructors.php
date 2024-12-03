@@ -23,7 +23,7 @@
         <th></th>
 
       </tr>
-    </thead>
+     </thead>
     <tbody>
       <?php
 while ($instructor = $instructors->fetch_assoc()) {
@@ -32,7 +32,6 @@ while ($instructor = $instructors->fetch_assoc()) {
     <td><?php echo $instructor['doctor_id']; ?></td>
     <td><?php echo $instructor['doctor_name']; ?></td>
     <td><?php echo $instructor['office_number']; ?></td>
-    <td><a href="courses-by-instructor.php?id=<?php echo $instructor['doctor_id']; ?>">Patients</a></td>
     <td>
         <?php 
   include "view-instructors-editform.php";
