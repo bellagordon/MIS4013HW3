@@ -31,4 +31,20 @@
 
 </script>
 
-<div id="example5.1" style="height: 400px; width: 100%;"></div>
+<style>
+  .timesheet-container {
+      border: 2px solid #007bff; /* Blue border */
+      border-radius: 10px; /* Rounded corners */
+      padding: 10px; /* Space inside the border */
+      background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+      margin-top: 20px; /* Spacing from other elements */
+  }
+</style>
+</head>
+<body>
+<div class="timesheet-container">
+    <div id="example5.1" style="height: 400px; width: 100%;"></div>
+</div>
+</body>
+</html>
+
