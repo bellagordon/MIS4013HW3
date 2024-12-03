@@ -24,14 +24,6 @@
            <div class="mb-3">
               <label for="iNum" class="form-label">Office Number</label>
               <input type="text" class="form-control" id="iNum" name="iNum">
-            <div class="mb-3">
-              <label for="cid" class="form-label">Patients</label>
-                  <?php
-              $patientList = selectPatientsForInput();
-              $selectedPatient = 0;
-                  include "view-patient-input-list.php"
-              ?>
-
             </div>
               <input type ="hidden" name="actionType" value="Add">
             <button type="submit" class="btn btn-primary">Save</button>
