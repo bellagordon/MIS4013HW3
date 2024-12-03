@@ -3,7 +3,7 @@
 $pageTitle = "Home";
 include "view-header.php";
 ?>
-
+<html>
 <style>
     body {
         font-family: 'Roboto', sans-serif;
@@ -80,7 +80,7 @@ include "view-header.php";
         </section>
     </main>
 </div>
-
+</html>
 <?php
 include "view-footer.php";
 ?>
