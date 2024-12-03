@@ -7,7 +7,7 @@
         $selText = " selected";
      }
   ?>
-       <option value="<?php echo $patientItem['patient_id']; ?> " <?=$selText?> ><?php echo $patientItem['patient_name']; ?> </option>
+       <option value="<?php echo $patientItem['patient_id']; ?>" <?=$selText?> ><?php echo $patientItem['patient_name']; ?> </option>
   <?php
   }
   ?>
