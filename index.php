@@ -21,7 +21,7 @@ include "view-header.php";
             padding: 20px;
         }
 
-        .hero, .features, .cta {
+        .hero, .cta {
             background-color: rgba(255, 255, 255, 0.8); 
             border-radius: 10px;
             padding: 20px;
