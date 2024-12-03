@@ -46,7 +46,7 @@ include "view-header.php";
     .cta {
         text-align: center;
         font-size: 1.5em;
-        margin-top: 20px; /* Add this line to reduce space */
+        m
     }
 
     .cta a {
@@ -62,7 +62,6 @@ include "view-header.php";
     .schedule-heading {
         font-weight: bold;
         font-size: 1.50em;
-        margin-top: 20px; /* Add margin-top to reduce the space between sections */
     }
 </style>
 
