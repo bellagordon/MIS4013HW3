@@ -4,6 +4,7 @@ $pageTitle = "Home";
 include "view-header.php";
 ?>
 <html>
+    <head>
 <style>
     body {
         font-family: 'Roboto', sans-serif;
@@ -64,7 +65,8 @@ include "view-header.php";
         font-size: 1.50em;
     }
 </style>
-
+</head>
+<body>
 <div class="container">
     <header class="hero">
         <h1>Seattle Grace Hospital Database</h1>
@@ -80,6 +82,7 @@ include "view-header.php";
         </section>
     </main>
 </div>
+</body>
 </html>
 <?php
 include "view-footer.php";
