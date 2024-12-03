@@ -23,7 +23,7 @@
         <th></th>
 
       </tr>
-     </thead>
+    </thead>
     <tbody>
       <?php
 while ($instructor = $instructors->fetch_assoc()) {
