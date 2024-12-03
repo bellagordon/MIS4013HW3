@@ -57,7 +57,16 @@ include "view-header.php";
     .cta a:hover {
         text-decoration: underline;
     }
+    
+    .schedule-heading {
+        font-weight: bold;
+        font-size: 1.50em; 
+    }
 </style>
+
+
+</style>
+
 
 <div class="container">
     <header class="hero">
@@ -67,8 +76,7 @@ include "view-header.php";
     <main>
         <section class="cta">
             <p>Start by navigating to the <a href="courses.php">Patients</a> or <a href="instructor.php">Doctors</a> sections.</p>
-            <p>Today's Schedule</p>
-        </section>
+            <p class="schedule-heading">Today's Schedule</p>        
         <section>
         <?php include "timesheet.php"; ?>
     </section>
