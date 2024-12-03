@@ -14,7 +14,7 @@ include "view-header.php";
     }
 
     .container {
-        max-width: 900px;
+        max-width: 1000px;
         margin: 0 auto;
         padding: 20px;
     }
@@ -69,10 +69,12 @@ include "view-header.php";
             <p>Start by navigating to the <a href="patients.php">Patients</a> or <a href="doctors.php">Doctors</a> sections.</p>
             <p>Today's Schedule</p>
         </section>
+        <section>
+        <?php include "timesheet.php"; ?>
+    </section>
     </main>
 </div>
 
 <?php
-include "timesheet.php";
 include "view-footer.php";
 ?>
