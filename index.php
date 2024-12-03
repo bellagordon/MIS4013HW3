@@ -8,7 +8,7 @@ include "view-header.php";
         font-family: 'Roboto', sans-serif;
         margin: 0;
         padding: 0;
-        background: url('https://i.pinimg.com/originals/7d/53/62/7d5362a6efbc8d8b5c1f6b7492e4d20a.jpg') no-repeat center center fixed;
+        background: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fillustrations%2Fplain-blue-background&psig=AOvVaw31hyAIzi_IbeA0zOUMedHx&ust=1733279360260000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNjPnffGiooDFQAAAAAdAAAAABAE') no-repeat center center fixed;
         background-size: cover;
         color: #333;
     }
