@@ -30,6 +30,16 @@
   }
 
 </script>
+    
+     <style>
+      #example5-1 text {
+          font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
     <div id="example5.1" style="height: 400px; width: 100%;"></div>
+  </body>
+</html>
 
 
