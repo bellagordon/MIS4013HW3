@@ -14,7 +14,7 @@ function selectInstructors() {
     }
 }
 
-function selectPatientssForInput() {
+function selectPatientsForInput() {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT patient_id, patient_name, patient_description FROM course order by patient_name");
