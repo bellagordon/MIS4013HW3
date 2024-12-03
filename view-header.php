@@ -28,9 +28,6 @@
         <li class="nav-item">
           <a class="nav-link" href="instructor-with-courses.php">Doctors with Patients</a>
         </li>
-           <li class="nav-item">
-          <a class="nav-link active" href="courses-by-instructor.php">Patients by Doctor</a>
-          </li>
         </li>
       </ul>
     </div>
