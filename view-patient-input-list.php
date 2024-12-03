@@ -3,11 +3,11 @@
   <?php
   while ($patientItem = $patientList -> fetch_assoc()) {
      $selText = "";
-     if ($selectedPatient == $patientItem['nurse_id']) {
+     if ($selectedPatient == $patientItem['patient_id']) {
         $selText = " selected";
      }
   ?>
-       <option value="<?php echo $patientrItem['nurse_id']; ?> " <?=$selText?> ><?php echo $patientItem['nurse_name']; ?> </option>
+       <option value="<?php echo $patientItem['patient_id']; ?> " <?=$selText?> ><?php echo $patientItem['patient_name']; ?> </option>
   <?php
   }
   ?>
