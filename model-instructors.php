@@ -1,6 +1,6 @@
 
 <?php
-function selectInstructors($iid, $iName, $iNum) {
+function selectInstructors() {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT doctor_id, doctor_name, office_number FROM instructor");
