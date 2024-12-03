@@ -66,7 +66,7 @@ include "view-header.php";
     </header>
     <main>
         <section class="cta">
-            <p>Start by navigating to the <a href="patients.php">Patients</a> or <a href="doctors.php">Doctors</a> sections.</p>
+            <p>Start by navigating to the <a href="courses.php">Patients</a> or <a href="instructor.php">Doctors</a> sections.</p>
             <p>Today's Schedule</p>
         </section>
         <section>
