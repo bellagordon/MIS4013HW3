@@ -14,6 +14,20 @@ function selectInstructors() {
     }
 }
 
+function selectPatientssForInput() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT patient_id, patient_name, patient_description FROM course order by patient_name");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
 function insertInstructor($iName, $iNum) {
     try {
         $conn = get_db_connection();
