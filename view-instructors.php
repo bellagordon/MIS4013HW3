@@ -31,13 +31,7 @@ while ($instructor = $instructors->fetch_assoc()) {
   <tr>
     <td><?php echo $instructor['doctor_id']; ?></td>
     <td><?php echo $instructor['doctor_name']; ?></td>
-    <td><?php echo $instructor['office_number']; ?></td>
-    <td>
-      <form method="post" action="courses-by-instructor.php">
-        <input type = "hidden" name = "iid" value ="<?php echo $instructor['doctor_id']; ?>">
-        <button type="submit" class="btn btn-primary">Patient</button>
-      </form>
-     </td>    
+    <td><?php echo $instructor['office_number']; ?></td> 
     <td>
         <?php 
   include "view-instructors-editform.php";
