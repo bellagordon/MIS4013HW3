@@ -32,16 +32,24 @@ function selectPatientsForInput() {
 function insertInstructor($iName, $iNum, $cName) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `hw3_database`.`instructor` (`doctor_name`, `office_number`, `patient_name`) VALUES ( ?, ?, ?)");
-        $stmt->bind_param("ss", $iName, $iNum, $cName);
+        $stmt = $conn->prepare("INSERT INTO `hw3_database`.`instructor` (`doctor_name`, `office_number`) VALUES (?, ?)");
+        $stmt->bind_param("ss", $iName, $iNum);
         $success = $stmt->execute();
+        $doctor_id = $conn->insert_id;
+        if ($success) {
+            $stmt = $conn->prepare("INSERT INTO `hw3_database`.`section` (`doctor_id`, `patient_name`) VALUES (?, ?)");
+            $stmt->bind_param("is", $iid, $cName);
+            $success = $stmt->execute();
+        }
         $conn->close();
         return $success;
+
     } catch (Exception $e) {
         $conn->close();
         throw $e;
     }
 }
+
 
 function editInstructor($iName, $iNum, $cName, $iid) {
     try {
