@@ -11,10 +11,9 @@
   </div>
 </div>
 
-<div class="border-info">
 <div class="table-responsive">
 
-  <table class="table table-primary table-striped w-100 border-light">
+  <table class="table table-primary table-striped w-100">
     <thead>
       <tr>
         <th>ID</th>
@@ -59,4 +58,4 @@ while ($instructor = $instructors->fetch_assoc()) {
     </tbody>
   </table>
 </div>
-</div>
+
