@@ -1,5 +1,4 @@
 
-
 <?php
 function selectCourses() {
     try {
@@ -14,32 +13,6 @@ function selectCourses() {
         throw $e;
     }
 }
-
-function insertCourse($cName, $cDesc, $sid) {
-    try {
-        $conn = get_db_connection();
-
-        $stmt = $conn->prepare("INSERT INTO `hw3_database`.`course` (`patient_name`, `patient_description`) VALUES (?, ?)");
-        $stmt->bind_param("ss", $cName, $cDesc);
-        $stmt->execute();
-        $patientId = $stmt->insert_id;
-
-        if ($sid) {
-            $stmt = $conn->prepare("INSERT INTO nurse_patient (nurse_id, patient_id) VALUES (?, ?)");
-            $stmt->bind_param("ii", $sid, $patientId);
-            $stmt->execute();
-        }
-
-        $conn->close();
-        return true;
-    } catch (Exception $e) {
-        $conn->close();
-        error_log("Error inserting course: " . $e->getMessage());
-        return false;
-    }
-}
-
-
 
 function insertCourse($cName, $cDesc) {
     try {
