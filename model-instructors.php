@@ -43,7 +43,7 @@ function insertInstructor($iName, $iNum, $cName) {
     }
 }
 
-function editInstructor($iName, $iNum, $iid) {
+function editInstructor($iName, $iNum, $cName, $iid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE `hw3_database`.`instructor` set `doctor_name` = ?, `office_number` = ?, `patient_name` = ?  WHERE doctor_id =?");
