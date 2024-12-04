@@ -29,10 +29,11 @@ h3,h4,h5 {
 }
 
 .header-background {
-   background-image: url("https://raw.githubusercontent.com/JustMonk/codepen-resource-project/master/img/compressed-header.jpg");
+   background-image: url("https://clickhole.com/wp-content/uploads/2024/02/y34xmioz1gqxiokzdexk-768x432-1-e1707776611757.jpeg");
    height: 200px;
    background-position: center right;
    background-size: cover;
+   opacity: .75;
 }
 
 .calendar-content {
