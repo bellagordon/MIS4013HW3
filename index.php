@@ -3,7 +3,9 @@
 $pageTitle = "Home";
 include "view-header.php";
 ?>
+
 <div class="w-auto p-3">
+  <span class="border border-info">
 <div class="card text-center" style="width: 30rem;">
   <div class="card-header">
     Hospital Database
@@ -17,6 +19,7 @@ include "view-header.php";
           Today's Schedule
   </div>
 </div>
+  </span>  
 </div>
        
 <?php
