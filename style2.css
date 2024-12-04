@@ -1,3 +1,4 @@
+
 body {
    font-family: 'Roboto', sans-serif;
    font-weight: 400;
@@ -6,71 +7,6 @@ body {
 h3,h4,h5 {
    font-weight: 300 !important;
 }
-
- .calendar-header {
-        background-color: #ADD8E6; /* Light Blue */
-      }
-      .calendar-cells .col {
-        background-color: #E0F7FA; /* Light Blue cells */
-      }
-      .prev-button, .next-button {
-        color: #0097A7; /* Darker blue for the navigation buttons */
-      }
-      #emptyFormTitle, #addForm h4 {
-        color: #0097A7; /* Light blue for the text */
-      }
-
-      /* Change the sidebar color to light blue */
-      .sidebar-wrapper {
-        background-color: #ADD8E6 !important;  /* Light Blue */
-      }
-
-      .sidebar-title h4, #sidebarEvents {
-        color: #004D6C; /* Darker Blue for the title and event text */
-      }
-
-      /* Change the footer of the calendar to light blue */
-      .calendar-footer {
-        background-color: #ADD8E6 !important; /* Light Blue */
-      }
-
-      .addEventButtons a {
-        background-color: #0097A7 !important; /* Darker blue for add event buttons */
-      }
-
-      /* Prevent the header from being cut off by adding padding */
-      .main-wrapper {
-        padding-top: 80px; /* Adjust this value if needed to match the height of the header */
-      }
-
-      /* Ensure sidebar does not overlap content when it's open */
-      .sidebar-wrapper {
-        z-index: 10;
-      }
-
-      .mobile-header {
-        z-index: 1000;
-      }
-
-      @media screen and (max-width: 768px) {
-        .sidebar-wrapper {
-          position: absolute;
-          top: 0;
-          left: -250px;
-          transition: left 0.3s ease;
-        }
-
-        .mobile-header {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          z-index: 100;
-        }
-
-        .sidebar-wrapper.open {
-          left: 0;
-        }
 
 .calendar-wrapper {
    height: auto;
@@ -87,19 +23,6 @@ h3,h4,h5 {
    font-weight: 300;
    position: relative;
 }
-
- .calendar-header {
-    background-color: #ADD8E6; /* Light Blue */
-  }
-  .calendar-cells .col {
-    background-color: #E0F7FA; /* Light Blue cells */
-  }
-  .prev-button, .next-button {
-    color: #0097A7; /* Darker blue for the navigation buttons */
-  }
-  #emptyFormTitle, #addForm h4 {
-    color: #0097A7; /* Light blue for the text */
-  }
 
 .header-title {
    padding-left: 15%;
