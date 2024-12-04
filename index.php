@@ -7,8 +7,7 @@ include "view-header.php";
   <img src="https://i.pinimg.com/originals/bb/f4/36/bbf436ca82996113de846c2caea1cf22.jpg" class="card-img" style="height: 350px; width: auto; object-fit: cover; opacity: 0.5;">
   <div class="card-img-overlay">
     <h1 class="card-title text-center">Seattle Grace Hospital</h1>
-    <h3 class="card-text text-center">Seattle Grace Hospital is a renowned teaching hospital in Seattle, known for its groundbreaking medical advancements and exceptional patient care.</h3>
-   <h3 class="card-text text-center">With a dedicated team of skilled professionals, we strive to innovate, heal, and shape the future of medicine.</h3>
+    <h3 class="card-text text-center">Seattle Grace Hospital is a renowned teaching hospital in Seattle, known for its groundbreaking medical advancements and exceptional patient care.With a dedicated team of skilled professionals, we strive to innovate, heal, and shape the future of medicine.</h3>
   </div>
   
 <div class="w-auto p-3">
