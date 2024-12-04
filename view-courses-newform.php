@@ -28,7 +28,7 @@
               <input type="text" class="form-control" id="cDesc" name="cDesc">
             </div>
                <div class="mb-3">
-              <label for="iid" class="form-label">Nurse</label>
+              <label for="cid" class="form-label">Nurse</label>
               <?php
               $nurseList = selectNursesForInput();
               $selectedNurse = 0;
