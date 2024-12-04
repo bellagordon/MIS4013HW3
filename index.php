@@ -20,7 +20,7 @@ include "view-header.php";
 </div>
 </div>
 <div class="card text-bg-dark">
-  <img src="https://static.wikia.nocookie.net/greysanatomy/images/1/18/Hospital.jpg/revision/latest?cb=20081209193856" class="card-img" style="height: 300px; width: auto; object-fit: cover; opacity: 0.5;">
+  <img src="https://i.pinimg.com/originals/bb/f4/36/bbf436ca82996113de846c2caea1cf22.jpg" class="card-img" style="height: 300px; width: auto; object-fit: cover; opacity: 0.5;">
   <div class="card-img-overlay">
     <h1 class="card-title">Seattle Grace Hospital/h1>
     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
