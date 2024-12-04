@@ -33,6 +33,11 @@
   }
   ?>
 </div>
-<?php 
-include "org-chart.php";
-?>
+<div class="card">
+  <div class="card-body">
+      <?php 
+      include "org-chart.php";
+      ?>
+</div>
+</div>
+
