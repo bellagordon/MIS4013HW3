@@ -14,7 +14,7 @@ include "view-header.php";
     <h3 class="card-text fst-italic">Welcome to the centralized database for managing doctor and patient information</h3>
     <h6 class ="text-md-center fw-lighter">Start by navigating to the <a href="courses.php">Patients</a> or <a href="instructor.php">Doctors</a> sections.</h5>
   </div>
-  <div class="card-footer text-body-primary text-md-center">
+  <div class="card-footer text-body-primary text-lg-center">
           Today's Schedule
   </div>
 </div>
