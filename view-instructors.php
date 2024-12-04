@@ -14,7 +14,7 @@
 <div class="border-info">
 <div class="table-responsive">
 
-  <table class="table-primary table-striped">
+  <table class="table-primary table-striped table-hover">
     <thead>
       <tr>
         <th>ID</th>
