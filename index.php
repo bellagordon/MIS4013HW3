@@ -6,7 +6,7 @@ include "view-header.php";
 
 <div class="w-auto p-3">
   <span class="border border-info border-4">
-<div class="card text-center" style="width: 30rem;">
+<div class="card text-center">
   <div class="card-header">
     Hospital Database
   </div>
