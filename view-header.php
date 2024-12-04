@@ -4,8 +4,6 @@
   <head>
     <style>
     body, .container {  
-   margin: 0;  
-  padding: 0;  
   background-color: #add8e6 !important; 
     }
     </style>
