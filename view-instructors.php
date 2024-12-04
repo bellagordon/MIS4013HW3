@@ -55,10 +55,10 @@ while ($instructor = $instructors->fetch_assoc()) {
   <?php
 }
         ?>
+    </tbody>
+  </table>
 <?php 
 include "org-chart.php";
 ?>
-    </tbody>
-  </table>
 </div>
 
