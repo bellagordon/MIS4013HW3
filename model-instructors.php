@@ -29,7 +29,7 @@ function selectPatientsForInput() {
     }
 }
 
-function insertInstructor($iName, $iNum, $cName) {
+function insertInstructor($iName, $iNum) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `hw3_database`.`instructor` (`doctor_name`, `office_number`) VALUES (?, ?)");
