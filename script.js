@@ -1,477 +1,252 @@
+var calendar = document.getElementById("calendar-table");
+var gridTable = document.getElementById("table-body");
+var currentDate = new Date();
+var selectedDate = currentDate;
+var selectedDayBlock = null;
+var globalEventObj = {};
 
-const calendar = document.querySelector(".calendar"),
-  date = document.querySelector(".date"),
-  daysContainer = document.querySelector(".days"),
-  prev = document.querySelector(".prev"),
-  next = document.querySelector(".next"),
-  todayBtn = document.querySelector(".today-btn"),
-  gotoBtn = document.querySelector(".goto-btn"),
-  dateInput = document.querySelector(".date-input"),
-  eventDay = document.querySelector(".event-day"),
-  eventDate = document.querySelector(".event-date"),
-  eventsContainer = document.querySelector(".events"),
-  addEventBtn = document.querySelector(".add-event"),
-  addEventWrapper = document.querySelector(".add-event-wrapper "),
-  addEventCloseBtn = document.querySelector(".close "),
-  addEventTitle = document.querySelector(".event-name "),
-  addEventFrom = document.querySelector(".event-time-from "),
-  addEventTo = document.querySelector(".event-time-to "),
-  addEventSubmit = document.querySelector(".add-event-btn ");
+var sidebar = document.getElementById("sidebar");
 
-let today = new Date();
-let activeDay;
-let month = today.getMonth();
-let year = today.getFullYear();
+function createCalendar(date, side) {
+   var currentDate = date;
+   var startDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
 
-const months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
+   var monthTitle = document.getElementById("month-name");
+   var monthName = currentDate.toLocaleString("en-US", {
+      month: "long"
+   });
+   var yearNum = currentDate.toLocaleString("en-US", {
+      year: "numeric"
+   });
+   monthTitle.innerHTML = `${monthName} ${yearNum}`;
 
-// const eventsArr = [
-//   {
-//     day: 13,
-//     month: 11,
-//     year: 2022,
-//     events: [
-//       {
-//         title: "Event 1 lorem ipsun dolar sit genfa tersd dsad ",
-//         time: "10:00 AM",
-//       },
-//       {
-//         title: "Event 2",
-//         time: "11:00 AM",
-//       },
-//     ],
-//   },
-// ];
+   if (side == "left") {
+      gridTable.className = "animated fadeOutRight";
+   } else {
+      gridTable.className = "animated fadeOutLeft";
+   }
 
-const eventsArr = [];
-getEvents();
-console.log(eventsArr);
+   setTimeout(() => {
+      gridTable.innerHTML = "";
 
-//function to add days in days with class day and prev-date next-date on previous month and next month days and active on today
-function initCalendar() {
-  const firstDay = new Date(year, month, 1);
-  const lastDay = new Date(year, month + 1, 0);
-  const prevLastDay = new Date(year, month, 0);
-  const prevDays = prevLastDay.getDate();
-  const lastDate = lastDay.getDate();
-  const day = firstDay.getDay();
-  const nextDays = 7 - lastDay.getDay() - 1;
+      var newTr = document.createElement("div");
+      newTr.className = "row";
+      var currentTr = gridTable.appendChild(newTr);
 
-  date.innerHTML = months[month] + " " + year;
-
-  let days = "";
-
-  for (let x = day; x > 0; x--) {
-    days += `<div class="day prev-date">${prevDays - x + 1}</div>`;
-  }
-
-  for (let i = 1; i <= lastDate; i++) {
-    //check if event is present on that day
-    let event = false;
-    eventsArr.forEach((eventObj) => {
-      if (
-        eventObj.day === i &&
-        eventObj.month === month + 1 &&
-        eventObj.year === year
-      ) {
-        event = true;
+      for (let i = 1; i < (startDate.getDay() || 7); i++) {
+         let emptyDivCol = document.createElement("div");
+         emptyDivCol.className = "col empty-day";
+         currentTr.appendChild(emptyDivCol);
       }
-    });
-    if (
-      i === new Date().getDate() &&
-      year === new Date().getFullYear() &&
-      month === new Date().getMonth()
-    ) {
-      activeDay = i;
-      getActiveDay(i);
-      updateEvents(i);
-      if (event) {
-        days += `<div class="day today active event">${i}</div>`;
+
+      var lastDay = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0);
+      lastDay = lastDay.getDate();
+
+      for (let i = 1; i <= lastDay; i++) {
+         if (currentTr.children.length >= 7) {
+            currentTr = gridTable.appendChild(addNewRow());
+         }
+         let currentDay = document.createElement("div");
+         currentDay.className = "col";
+         if (selectedDayBlock == null && i == currentDate.getDate() || selectedDate.toDateString() == new Date(currentDate.getFullYear(), currentDate.getMonth(), i).toDateString()) {
+            selectedDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), i);
+
+            document.getElementById("eventDayName").innerHTML = selectedDate.toLocaleString("en-US", {
+               month: "long",
+               day: "numeric",
+               year: "numeric"
+            });
+
+            selectedDayBlock = currentDay;
+            setTimeout(() => {
+               currentDay.classList.add("blue");
+               currentDay.classList.add("lighten-3");
+            }, 900);
+         }
+         currentDay.innerHTML = i;
+
+         //show marks
+         if (globalEventObj[new Date(currentDate.getFullYear(), currentDate.getMonth(), i).toDateString()]) {
+            let eventMark = document.createElement("div");
+            eventMark.className = "day-mark";
+            currentDay.appendChild(eventMark);
+         }
+
+         currentTr.appendChild(currentDay);
+      }
+
+      for (let i = currentTr.getElementsByTagName("div").length; i < 7; i++) {
+         let emptyDivCol = document.createElement("div");
+         emptyDivCol.className = "col empty-day";
+         currentTr.appendChild(emptyDivCol);
+      }
+
+      if (side == "left") {
+         gridTable.className = "animated fadeInLeft";
       } else {
-        days += `<div class="day today active">${i}</div>`;
+         gridTable.className = "animated fadeInRight";
       }
-    } else {
-      if (event) {
-        days += `<div class="day event">${i}</div>`;
-      } else {
-        days += `<div class="day ">${i}</div>`;
+
+      function addNewRow() {
+         let node = document.createElement("div");
+         node.className = "row";
+         return node;
       }
-    }
-  }
 
-  for (let j = 1; j <= nextDays; j++) {
-    days += `<div class="day next-date">${j}</div>`;
-  }
-  daysContainer.innerHTML = days;
-  addListner();
+   }, !side ? 0 : 270);
 }
 
-//function to add month and year on prev and next button
-function prevMonth() {
-  month--;
-  if (month < 0) {
-    month = 11;
-    year--;
-  }
-  initCalendar();
-}
+createCalendar(currentDate);
 
-function nextMonth() {
-  month++;
-  if (month > 11) {
-    month = 0;
-    year++;
-  }
-  initCalendar();
-}
-
-prev.addEventListener("click", prevMonth);
-next.addEventListener("click", nextMonth);
-
-initCalendar();
-
-//function to add active on day
-function addListner() {
-  const days = document.querySelectorAll(".day");
-  days.forEach((day) => {
-    day.addEventListener("click", (e) => {
-      getActiveDay(e.target.innerHTML);
-      updateEvents(Number(e.target.innerHTML));
-      activeDay = Number(e.target.innerHTML);
-      //remove active
-      days.forEach((day) => {
-        day.classList.remove("active");
-      });
-      //if clicked prev-date or next-date switch to that month
-      if (e.target.classList.contains("prev-date")) {
-        prevMonth();
-        //add active to clicked day afte month is change
-        setTimeout(() => {
-          //add active where no prev-date or next-date
-          const days = document.querySelectorAll(".day");
-          days.forEach((day) => {
-            if (
-              !day.classList.contains("prev-date") &&
-              day.innerHTML === e.target.innerHTML
-            ) {
-              day.classList.add("active");
-            }
-          });
-        }, 100);
-      } else if (e.target.classList.contains("next-date")) {
-        nextMonth();
-        //add active to clicked day afte month is changed
-        setTimeout(() => {
-          const days = document.querySelectorAll(".day");
-          days.forEach((day) => {
-            if (
-              !day.classList.contains("next-date") &&
-              day.innerHTML === e.target.innerHTML
-            ) {
-              day.classList.add("active");
-            }
-          });
-        }, 100);
-      } else {
-        e.target.classList.add("active");
-      }
-    });
-  });
-}
-
-todayBtn.addEventListener("click", () => {
-  today = new Date();
-  month = today.getMonth();
-  year = today.getFullYear();
-  initCalendar();
+var todayDayName = document.getElementById("todayDayName");
+todayDayName.innerHTML = "Today is " + currentDate.toLocaleString("en-US", {
+   weekday: "long",
+   day: "numeric",
+   month: "short"
 });
 
-dateInput.addEventListener("input", (e) => {
-  dateInput.value = dateInput.value.replace(/[^0-9/]/g, "");
-  if (dateInput.value.length === 2) {
-    dateInput.value += "/";
-  }
-  if (dateInput.value.length > 7) {
-    dateInput.value = dateInput.value.slice(0, 7);
-  }
-  if (e.inputType === "deleteContentBackward") {
-    if (dateInput.value.length === 3) {
-      dateInput.value = dateInput.value.slice(0, 2);
-    }
-  }
-});
+var prevButton = document.getElementById("prev");
+var nextButton = document.getElementById("next");
 
-gotoBtn.addEventListener("click", gotoDate);
+prevButton.onclick = function changeMonthPrev() {
+   currentDate = new Date(currentDate.getFullYear(), currentDate.getMonth() - 1);
+   createCalendar(currentDate, "left");
+}
+nextButton.onclick = function changeMonthNext() {
+   currentDate = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1);
+   createCalendar(currentDate, "right");
+}
 
-function gotoDate() {
-  console.log("here");
-  const dateArr = dateInput.value.split("/");
-  if (dateArr.length === 2) {
-    if (dateArr[0] > 0 && dateArr[0] < 13 && dateArr[1].length === 4) {
-      month = dateArr[0] - 1;
-      year = dateArr[1];
-      initCalendar();
+function addEvent(title, desc) {
+   if (!globalEventObj[selectedDate.toDateString()]) {
+      globalEventObj[selectedDate.toDateString()] = {};
+   }
+   globalEventObj[selectedDate.toDateString()][title] = desc;
+}
+
+function showEvents() {
+   let sidebarEvents = document.getElementById("sidebarEvents");
+   let objWithDate = globalEventObj[selectedDate.toDateString()];
+
+   sidebarEvents.innerHTML = "";
+
+   if (objWithDate) {
+      let eventsCount = 0;
+      for (key in globalEventObj[selectedDate.toDateString()]) {
+         let eventContainer = document.createElement("div");
+         eventContainer.className = "eventCard";
+
+         let eventHeader = document.createElement("div");
+         eventHeader.className = "eventCard-header";
+
+         let eventDescription = document.createElement("div");
+         eventDescription.className = "eventCard-description";
+
+         eventHeader.appendChild(document.createTextNode(key));
+         eventContainer.appendChild(eventHeader);
+
+         eventDescription.appendChild(document.createTextNode(objWithDate[key]));
+         eventContainer.appendChild(eventDescription);
+
+         let markWrapper = document.createElement("div");
+         markWrapper.className = "eventCard-mark-wrapper";
+         let mark = document.createElement("div");
+         mark.classList = "eventCard-mark";
+         markWrapper.appendChild(mark);
+         eventContainer.appendChild(markWrapper);
+
+         sidebarEvents.appendChild(eventContainer);
+
+         eventsCount++;
+      }
+      let emptyFormMessage = document.getElementById("emptyFormTitle");
+      emptyFormMessage.innerHTML = `${eventsCount} events now`;
+   } else {
+      let emptyMessage = document.createElement("div");
+      emptyMessage.className = "empty-message";
+      emptyMessage.innerHTML = "Sorry, no events to selected date";
+      sidebarEvents.appendChild(emptyMessage);
+      let emptyFormMessage = document.getElementById("emptyFormTitle");
+      emptyFormMessage.innerHTML = "No events now";
+   }
+}
+
+gridTable.onclick = function (e) {
+
+   if (!e.target.classList.contains("col") || e.target.classList.contains("empty-day")) {
       return;
-    }
-  }
-  alert("Invalid Date");
-}
+   }
 
-//function get active day day name and date and update eventday eventdate
-function getActiveDay(date) {
-  const day = new Date(year, month, date);
-  const dayName = day.toString().split(" ")[0];
-  eventDay.innerHTML = dayName;
-  eventDate.innerHTML = date + " " + months[month] + " " + year;
-}
-
-//function update events when a day is active
-function updateEvents(date) {
-  let events = "";
-  eventsArr.forEach((event) => {
-    if (
-      date === event.day &&
-      month + 1 === event.month &&
-      year === event.year
-    ) {
-      event.events.forEach((event) => {
-        events += `<div class="event">
-            <div class="title">
-              <i class="fas fa-circle"></i>
-              <h3 class="event-title">${event.title}</h3>
-            </div>
-            <div class="event-time">
-              <span class="event-time">${event.time}</span>
-            </div>
-        </div>`;
-      });
-    }
-  });
-  if (events === "") {
-    events = `<div class="no-event">
-            <h3>No Events</h3>
-        </div>`;
-  }
-  eventsContainer.innerHTML = events;
-  saveEvents();
-}
-
-//function to add event
-addEventBtn.addEventListener("click", () => {
-  addEventWrapper.classList.toggle("active");
-});
-
-addEventCloseBtn.addEventListener("click", () => {
-  addEventWrapper.classList.remove("active");
-});
-
-document.addEventListener("click", (e) => {
-  if (e.target !== addEventBtn && !addEventWrapper.contains(e.target)) {
-    addEventWrapper.classList.remove("active");
-  }
-});
-
-//allow 50 chars in eventtitle
-addEventTitle.addEventListener("input", (e) => {
-  addEventTitle.value = addEventTitle.value.slice(0, 60);
-});
-
-function defineProperty() {
-  var osccred = document.createElement("div");
-  osccred.innerHTML =
-    "A Project By <a href='https://www.youtube.com/channel/UCiUtBDVaSmMGKxg1HYeK-BQ' target=_blank>Open Source Coding</a>";
-  osccred.style.position = "absolute";
-  osccred.style.bottom = "0";
-  osccred.style.right = "0";
-  osccred.style.fontSize = "10px";
-  osccred.style.color = "#ccc";
-  osccred.style.fontFamily = "sans-serif";
-  osccred.style.padding = "5px";
-  osccred.style.background = "#fff";
-  osccred.style.borderTopLeftRadius = "5px";
-  osccred.style.borderBottomRightRadius = "5px";
-  osccred.style.boxShadow = "0 0 5px #ccc";
-  document.body.appendChild(osccred);
-}
-
-defineProperty();
-
-//allow only time in eventtime from and to
-addEventFrom.addEventListener("input", (e) => {
-  addEventFrom.value = addEventFrom.value.replace(/[^0-9:]/g, "");
-  if (addEventFrom.value.length === 2) {
-    addEventFrom.value += ":";
-  }
-  if (addEventFrom.value.length > 5) {
-    addEventFrom.value = addEventFrom.value.slice(0, 5);
-  }
-});
-
-addEventTo.addEventListener("input", (e) => {
-  addEventTo.value = addEventTo.value.replace(/[^0-9:]/g, "");
-  if (addEventTo.value.length === 2) {
-    addEventTo.value += ":";
-  }
-  if (addEventTo.value.length > 5) {
-    addEventTo.value = addEventTo.value.slice(0, 5);
-  }
-});
-
-//function to add event to eventsArr
-addEventSubmit.addEventListener("click", () => {
-  const eventTitle = addEventTitle.value;
-  const eventTimeFrom = addEventFrom.value;
-  const eventTimeTo = addEventTo.value;
-  if (eventTitle === "" || eventTimeFrom === "" || eventTimeTo === "") {
-    alert("Please fill all the fields");
-    return;
-  }
-
-  //check correct time format 24 hour
-  const timeFromArr = eventTimeFrom.split(":");
-  const timeToArr = eventTimeTo.split(":");
-  if (
-    timeFromArr.length !== 2 ||
-    timeToArr.length !== 2 ||
-    timeFromArr[0] > 23 ||
-    timeFromArr[1] > 59 ||
-    timeToArr[0] > 23 ||
-    timeToArr[1] > 59
-  ) {
-    alert("Invalid Time Format");
-    return;
-  }
-
-  const timeFrom = convertTime(eventTimeFrom);
-  const timeTo = convertTime(eventTimeTo);
-
-  //check if event is already added
-  let eventExist = false;
-  eventsArr.forEach((event) => {
-    if (
-      event.day === activeDay &&
-      event.month === month + 1 &&
-      event.year === year
-    ) {
-      event.events.forEach((event) => {
-        if (event.title === eventTitle) {
-          eventExist = true;
-        }
-      });
-    }
-  });
-  if (eventExist) {
-    alert("Event already added");
-    return;
-  }
-  const newEvent = {
-    title: eventTitle,
-    time: timeFrom + " - " + timeTo,
-  };
-  console.log(newEvent);
-  console.log(activeDay);
-  let eventAdded = false;
-  if (eventsArr.length > 0) {
-    eventsArr.forEach((item) => {
-      if (
-        item.day === activeDay &&
-        item.month === month + 1 &&
-        item.year === year
-      ) {
-        item.events.push(newEvent);
-        eventAdded = true;
+   if (selectedDayBlock) {
+      if (selectedDayBlock.classList.contains("blue") && selectedDayBlock.classList.contains("lighten-3")) {
+         selectedDayBlock.classList.remove("blue");
+         selectedDayBlock.classList.remove("lighten-3");
       }
-    });
-  }
+   }
+   selectedDayBlock = e.target;
+   selectedDayBlock.classList.add("blue");
+   selectedDayBlock.classList.add("lighten-3");
 
-  if (!eventAdded) {
-    eventsArr.push({
-      day: activeDay,
-      month: month + 1,
-      year: year,
-      events: [newEvent],
-    });
-  }
+   selectedDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), parseInt(e.target.innerHTML));
 
-  console.log(eventsArr);
-  addEventWrapper.classList.remove("active");
-  addEventTitle.value = "";
-  addEventFrom.value = "";
-  addEventTo.value = "";
-  updateEvents(activeDay);
-  //select active day and add event class if not added
-  const activeDayEl = document.querySelector(".day.active");
-  if (!activeDayEl.classList.contains("event")) {
-    activeDayEl.classList.add("event");
-  }
-});
+   showEvents();
 
-//function to delete event when clicked on event
-eventsContainer.addEventListener("click", (e) => {
-  if (e.target.classList.contains("event")) {
-    if (confirm("Are you sure you want to delete this event?")) {
-      const eventTitle = e.target.children[0].children[1].innerHTML;
-      eventsArr.forEach((event) => {
-        if (
-          event.day === activeDay &&
-          event.month === month + 1 &&
-          event.year === year
-        ) {
-          event.events.forEach((item, index) => {
-            if (item.title === eventTitle) {
-              event.events.splice(index, 1);
-            }
-          });
-          //if no events left in a day then remove that day from eventsArr
-          if (event.events.length === 0) {
-            eventsArr.splice(eventsArr.indexOf(event), 1);
-            //remove event class from day
-            const activeDayEl = document.querySelector(".day.active");
-            if (activeDayEl.classList.contains("event")) {
-              activeDayEl.classList.remove("event");
-            }
-          }
-        }
-      });
-      updateEvents(activeDay);
-    }
-  }
-});
+   document.getElementById("eventDayName").innerHTML = selectedDate.toLocaleString("en-US", {
+      month: "long",
+      day: "numeric",
+      year: "numeric"
+   });
 
-//function to save events in local storage
-function saveEvents() {
-  localStorage.setItem("events", JSON.stringify(eventsArr));
 }
 
-//function to get events from local storage
-function getEvents() {
-  //check if events are already saved in local storage then return event else nothing
-  if (localStorage.getItem("events") === null) {
-    return;
-  }
-  eventsArr.push(...JSON.parse(localStorage.getItem("events")));
+var changeFormButton = document.getElementById("changeFormButton");
+var addForm = document.getElementById("addForm");
+changeFormButton.onclick = function (e) {
+   addForm.style.top = 0;
 }
 
-function convertTime(time) {
-  //convert time to 24 hour format
-  let timeArr = time.split(":");
-  let timeHour = timeArr[0];
-  let timeMin = timeArr[1];
-  let timeFormat = timeHour >= 12 ? "PM" : "AM";
-  timeHour = timeHour % 12 || 12;
-  time = timeHour + ":" + timeMin + " " + timeFormat;
-  return time;
+var cancelAdd = document.getElementById("cancelAdd");
+cancelAdd.onclick = function (e) {
+   addForm.style.top = "100%";
+   let inputs = addForm.getElementsByTagName("input");
+   for (let i = 0; i < inputs.length; i++) {
+      inputs[i].value = "";
+   }
+   let labels = addForm.getElementsByTagName("label");
+   for (let i = 0; i < labels.length; i++) {
+      labels[i].className = "";
+   }
+}
+
+var addEventButton = document.getElementById("addEventButton");
+addEventButton.onclick = function (e) {
+   let title = document.getElementById("eventTitleInput").value.trim();
+   let desc = document.getElementById("eventDescInput").value.trim();
+
+   if (!title || !desc) {
+      document.getElementById("eventTitleInput").value = "";
+      document.getElementById("eventDescInput").value = "";
+      let labels = addForm.getElementsByTagName("label");
+      for (let i = 0; i < labels.length; i++) {
+         labels[i].className = "";
+      }
+      return;
+   }
+
+   addEvent(title, desc);
+   showEvents();
+
+   if (!selectedDayBlock.querySelector(".day-mark")) {
+      selectedDayBlock.appendChild(document.createElement("div")).className = "day-mark";
+   }
+
+   let inputs = addForm.getElementsByTagName("input");
+   for (let i = 0; i < inputs.length; i++) {
+      inputs[i].value = "";
+   }
+   let labels = addForm.getElementsByTagName("label");
+   for (let i = 0; i < labels.length; i++) {
+      labels[i].className = "";
+   }
+
 }
