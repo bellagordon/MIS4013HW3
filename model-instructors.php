@@ -29,11 +29,11 @@ function selectPatientsForInput() {
     }
 }
 
-function insertInstructor($iName, $iNum) {
+function insertInstructor($iName, $iNum, $cName) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `hw3_database`.`instructor` (`doctor_name`, `office_number`) VALUES ( ?, ?)");
-        $stmt->bind_param("ss", $iName, $iNum);
+        $stmt = $conn->prepare("INSERT INTO `hw3_database`.`instructor` (`doctor_name`, `office_number`, `patient_name`) VALUES ( ?, ?)");
+        $stmt->bind_param("ss", $iName, $iNum, $cName);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -46,8 +46,8 @@ function insertInstructor($iName, $iNum) {
 function editInstructor($iName, $iNum, $iid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("UPDATE `hw3_database`.`instructor` set `doctor_name` = ?, `office_number` = ?  WHERE doctor_id =?");
-        $stmt->bind_param("ssi",$iName, $iNum, $iid);
+        $stmt = $conn->prepare("UPDATE `hw3_database`.`instructor` set `doctor_name` = ?, `office_number` = ?, `patient_name` = ?  WHERE doctor_id =?");
+        $stmt->bind_param("ssi",$iName, $iNum, $cName, $iid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
