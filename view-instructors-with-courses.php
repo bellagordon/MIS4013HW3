@@ -1,5 +1,5 @@
 
-<h1>Doctors with Patients</h1>
+<h1 class="text-center">Doctors</h1>
 <div class="card-group">
 
   <?php
