@@ -20,7 +20,7 @@ include "view-header.php";
 </div>
 </div>
 <div class="card text-bg-dark">
-  <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fhome.adelphi.edu%2F~kr21836%2Flocation.html&psig=AOvVaw1pc9jADTE3sTmoVnb4crup&ust=1733372234490000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOC0x_SgjYoDFQAAAAAdAAAAABAR" class="card-img" alt="">
+  <img src="https://home.adelphi.edu/~kr21836/Greys4.jpg" class="card-img" alt="">
   <div class="card-img-overlay">
     <h5 class="card-title">Card title</h5>
     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
