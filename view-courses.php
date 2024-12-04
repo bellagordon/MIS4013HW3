@@ -50,7 +50,7 @@ while ($course = $courses->fetch_assoc()) {
     <td>
       <form method="post" action="sections-by-course.php">
         <input type = "hidden" name = "cid" value ="<?php echo $course['patient_id']; ?>">
-        <button type="submit" class="btn btn-primary">Assigned Nurse</button>
+        <button type="submit" class="btn btn-light">Assigned Nurse</button>
       </form>
    </td>
   </tr>
