@@ -9,7 +9,7 @@
   </div>
 </div>
 
-<div class="border-light">
+<div class="border-info">
 <div class="table-responsive">
 
   <table class="table">
