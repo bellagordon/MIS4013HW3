@@ -5,7 +5,9 @@
     <h1>Doctors</h1>
   </div>
   <div class="col-auto">
-    
+     <?php 
+        include "view-instructors-newform.php";
+        ?>
   </div>
 </div>
 
@@ -22,11 +24,7 @@
         <th></th>
         <th></th>
         <th></th>
-        <th> 
-        <?php 
-        include "view-instructors-newform.php";
-        ?>
-        </th>
+       
 
       </tr>
     </thead>
@@ -55,7 +53,7 @@ while ($instructor = $instructors->fetch_assoc()) {
         </button>
       </form>
     </td>
-    <td></td>
+    
   </tr>
   <?php
 }
