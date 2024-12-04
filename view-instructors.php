@@ -55,6 +55,7 @@ while ($instructor = $instructors->fetch_assoc()) {
         </button>
       </form>
     </td>
+    <td></td>
   </tr>
   <?php
 }
