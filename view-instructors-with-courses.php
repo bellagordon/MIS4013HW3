@@ -33,7 +33,7 @@
   }
   ?>
 </div>
-<div class="card">
+<div class="card" style="max-width: 800px; border: 2px solid #17a2b8; background-color: rgba(0, 123, 255, 0.5);">
   <div class="card-body">
       <?php 
       include "org-chart.php";
