@@ -29,11 +29,10 @@ h3,h4,h5 {
 }
 
 .header-background {
-   background-image: url("https://ew.com/thmb/LOH0MSPgmXA2zy7oziyR-KGGJG0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/gettyimages-93765017-2000-45a7c68953564e5b9672dbe188f0c505.jpg");
+   background-image: url("https://raw.githubusercontent.com/JustMonk/codepen-resource-project/master/img/compressed-header.jpg");
    height: 200px;
    background-position: center right;
    background-size: cover;
-   opacity: 0.75;
 }
 
 .calendar-content {
@@ -59,7 +58,7 @@ h3,h4,h5 {
    font-family: 'Roboto', sans-serif;
    font-weight: 300;
    text-align: center;
-   background-color: ##77b1d4 !important;
+   background-color: #4b6289 !important;
    position: relative;
    overflow: hidden;
 }
@@ -69,7 +68,7 @@ h3,h4,h5 {
    top: 100%;
    width: 100%;
    height: 100%;
-   background-color: ##77b1d4 !important;
+   background-color: #4b5889 !important;
    transition: top 0.5s cubic-bezier(1, 0, 0, 1);
    padding: 0 5px 0 5px;
 }
@@ -112,7 +111,7 @@ h3,h4,h5 {
 
 .sidebar-wrapper {
    color: #fff;
-   background-color: ##77b1d4 !important;
+   background-color: #5a649c !important;
    padding-top: 0;
    padding-bottom: 20px;
    font-family: 'Roboto', sans-serif;
