@@ -6,9 +6,21 @@ body {
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    padding: 1rem; /* Added padding around the body */
 }
-* {
-    box-sizing: border-box;
+
+.calendar-container {
+    padding: 2rem; /* Padding around the entire calendar section */
+}
+
+.calendar-header {
+    text-align: center;
+    padding-bottom: 1rem; /* Space between the header and calendar */
+}
+
+.calendar__weekday,
+.calendar__day {
+    padding: 1rem; /* Add padding inside the weekday/day cells */
 }
 
 .calendar {
