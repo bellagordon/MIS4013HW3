@@ -19,7 +19,6 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     </div>
-    <div class="bg-success p-2 text-white bg-opacity-50">
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
@@ -36,7 +35,6 @@
         </li>
         </li>
       </ul>
-    </div>
     </div>
   </div>
 </nav>
