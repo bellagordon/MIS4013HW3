@@ -1,4 +1,3 @@
-
 body {
    font-family: 'Roboto', sans-serif;
    font-weight: 400;
@@ -29,7 +28,7 @@ h3,h4,h5 {
 }
 
 .header-background {
-   background-image: url("https://steosphere.wordpress.com/wp-content/uploads/2013/04/greys-image-01.jpg");
+   background-image: url("https://raw.githubusercontent.com/JustMonk/codepen-resource-project/master/img/compressed-header.jpg");
    height: 200px;
    background-position: center right;
    background-size: cover;
