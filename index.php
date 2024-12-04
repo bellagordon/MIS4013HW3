@@ -5,7 +5,7 @@ include "view-header.php";
 ?>
 <div class="w-auto p-3">
  
-<div class="card text-bg-info mb-3 text-center border-light">
+<div class="card text-bg-info mb-3 text-center border-light opacity-50">
   <div class="card-header">
     <h2>Hospital Database</h2>
   </div>
