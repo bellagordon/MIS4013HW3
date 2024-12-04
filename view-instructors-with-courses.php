@@ -34,7 +34,6 @@
   }
   ?>
 </div>
-<!-- Adding Nurses Section -->
 <div class="card-group">
   <?php
   // Assuming $courses is already fetched in the first loop, ensure that courses have been reset or fetched again
