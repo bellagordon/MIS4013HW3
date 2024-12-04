@@ -11,7 +11,7 @@
 
 
 <div class="table-responsive">
-<div class="border-light">
+
   <table class="table">
     <thead>
       <tr>
@@ -62,4 +62,4 @@ while ($instructor = $instructors->fetch_assoc()) {
     </tbody>
   </table>
 </div>
-</div>
+
