@@ -10,10 +10,10 @@ include "view-header.php";
     <p class="card-text">Seattle Grace Hospital is a renowned teaching hospital in Seattle, known for its groundbreaking medical advancements and exceptional patient care.</p>
    <p class="card-text">With a dedicated team of skilled professionals, we strive to innovate, heal, and shape the future of medicine.</p>
   </div>
-</div>
+  
 <div class="w-auto p-3">
  
-<div class="card text-center border-info opacity-50">
+<div class="card text-center border-info opacity-25">
   <div class="card-header">
     <h2>Hospital Database</h2>
   </div>
