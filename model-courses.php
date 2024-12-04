@@ -14,19 +14,30 @@ function selectCourses() {
     }
 }
 
-function selectNursesForInput() {
+function insertCourse($cName, $cDesc, $sid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT nurse_id, nurse_name FROM section order by nurse_name");
+
+        $stmt = $conn->prepare("INSERT INTO `hw3_database`.`course` (`patient_name`, `patient_description`) VALUES (?, ?)");
+        $stmt->bind_param("ss", $cName, $cDesc);
         $stmt->execute();
-        $result = $stmt->get_result();
+        $patientId = $stmt->insert_id;
+
+        if ($sid) {
+            $stmt = $conn->prepare("INSERT INTO nurse_patient (nurse_id, patient_id) VALUES (?, ?)");
+            $stmt->bind_param("ii", $sid, $patientId);
+            $stmt->execute();
+        }
+
         $conn->close();
-        return $result;
+        return true;
     } catch (Exception $e) {
         $conn->close();
-        throw $e;
+        error_log("Error inserting course: " . $e->getMessage());
+        return false;
     }
 }
+
 
 
 function insertCourse($cName, $cDesc) {
