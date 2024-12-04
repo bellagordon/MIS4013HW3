@@ -17,15 +17,15 @@
         <th>ID</th>
       <th>Name</th>
       <th>Office</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
         <th> 
         <?php 
         include "view-instructors-newform.php";
         ?>
         </th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
 
       </tr>
     </thead>
