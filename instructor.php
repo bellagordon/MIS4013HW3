@@ -33,6 +33,6 @@ if (isset($_POST['actionType'])) {
 }
 
 $instructors = selectInstructors();
-include "view-instructors.php";
+include "view-instructors2.php";
 include "view-footer.php";
 ?>
