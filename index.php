@@ -25,7 +25,7 @@ include "view-header.php";
       <h6 class ="text-md-center fw-lighter">Start by navigating to the <a href="courses.php">Patients</a> or <a href="instructor.php">Doctors</a> sections.</h6>
     </div>
     <div class="card-footer text-body-primary text-center fw-medium">
-      <h4 class="text-md-center">Today's Schedule</h4>
+      <h4 class="text-md-center">OR Schedule</h4>
     </div>
   </div>
 </div>
