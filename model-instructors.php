@@ -1,4 +1,5 @@
 
+
 <?php
 function selectInstructors() {
     try {
@@ -28,31 +29,19 @@ function selectPatientsForInput() {
     }
 }
 
-function insertInstructor($iName, $iNum, $cid) {
+function insertInstructor($iName, $iNum) {
     try {
         $conn = get_db_connection();
-r
-        $stmt = $conn->prepare("INSERT INTO doctors (doctor_name, office_number) VALUES (?, ?)");
+        $stmt = $conn->prepare("INSERT INTO `hw3_database`.`instructor` (`doctor_name`, `office_number`) VALUES ( ?, ?)");
         $stmt->bind_param("ss", $iName, $iNum);
-        $stmt->execute();
-        $doctorId = $stmt->insert_id; 
-
-     
-        if ($cid) {
-            $stmt = $conn->prepare("INSERT INTO doctor_patient (doctor_id, patient_id) VALUES (?, ?)");
-            $stmt->bind_param("ii", $doctorId, $cid);
-            $stmt->execute();
-        }
-
+        $success = $stmt->execute();
         $conn->close();
-        return true;
+        return $success;
     } catch (Exception $e) {
         $conn->close();
-        error_log("Error inserting instructor: " . $e->getMessage());
-        return false;
+        throw $e;
     }
 }
-
 
 function editInstructor($iName, $iNum, $iid) {
     try {
