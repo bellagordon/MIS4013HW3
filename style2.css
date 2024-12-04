@@ -29,10 +29,11 @@ h3,h4,h5 {
 }
 
 .header-background {
-   background-image: url("https://raw.githubusercontent.com/JustMonk/codepen-resource-project/master/img/compressed-header.jpg");
+   background-image: url("https://ew.com/thmb/LOH0MSPgmXA2zy7oziyR-KGGJG0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/gettyimages-93765017-2000-45a7c68953564e5b9672dbe188f0c505.jpg");
    height: 200px;
    background-position: center right;
    background-size: cover;
+   opacity: 0.75;
 }
 
 .calendar-content {
