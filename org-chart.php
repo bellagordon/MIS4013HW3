@@ -17,11 +17,10 @@
            '', 'Chief'],
           [{'v':'Derek Shepherd', 'f':'Derek Shepherd<div style="color:red; font-style:italic">Chief of Neurosurgery</div>'},
            'Richard Webber', 'Neuro'],
-          [{'v':'Miranda Bailey', 'f':'Miranda Bailer<div style="color:red; font-style:italic">Chief Resident</div>'},
+          [{'v':'Miranda Bailey', 'f':'Miranda Bailey<div style="color:red; font-style:italic">Chief Resident</div>'},
            'Richard Webber', 'Chief Resident'],
-          ['Alice', 'Mike', ''],
-          ['Bob', 'Jim', 'Bob Sponge'],
-          ['Carol', 'Bob', '']
+          [{'v':'Christina Yang', 'f':'Christina Yang<div style="color:red; font-style:italic">Head Cardiologist</div>'},
+           'Miranda Bailey', 'Cardio'],
         ]);
 
         // Create the chart.
