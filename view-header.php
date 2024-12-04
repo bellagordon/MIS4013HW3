@@ -3,8 +3,8 @@
 <html lang="en">
   <head>
     <style>
-    body {
-    background-color: #add8e6; /* Light blue */
+    body, .container {  
+  background-color: #add8e6; /* Light blue */  
     }
     </style>
     <meta charset="utf-8">
