@@ -1,3 +1,4 @@
+
 <h1>Doctors with Patients</h1>
 <div class="card-group">
 
@@ -17,29 +18,6 @@
               <?php
               $courses = selectCoursesByInstructor($instructor['doctor_id']);
               while ($course = $courses->fetch_assoc()) {
-                ?>
-                <li class="list-group-item">
-                  <?php echo $course['patient_name']; ?> - <?php echo $course['room']; ?> - <?php echo $course['day_time']; ?>
-                </li>
-                <?php
-              }
-              ?>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  <div class="card-body">
-        <h5 class="card-title"><?php echo $section['nurse_name']; ?></h5>
-        <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?php echo $section['nurse_id']; ?>" aria-expanded="false" aria-controls="collapse<?php echo $section['nurse_id']; ?>">
-          View Patients
-        </button>
-        <div class="collapse mt-3" id="collapse<?php echo $section['nurse_id']; ?>">
-          <div class="card card-body">
-            <ul class="list-group">
-              <?php
-              $sections = selectSectionsByCourse($section['nurse_id']);
-              while ($section = $sections->fetch_assoc()) {
                 ?>
                 <li class="list-group-item">
                   <?php echo $course['patient_name']; ?> - <?php echo $course['room']; ?> - <?php echo $course['day_time']; ?>
