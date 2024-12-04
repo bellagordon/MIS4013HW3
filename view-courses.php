@@ -11,7 +11,7 @@
 </div>
 
 <div class="table-responsive">
-  <table class="table table-striped table-bordered border-info border-3 w-100">
+  <table class="table table-striped table-bordered border-info w-100">
     <thead>
       <tr>
         <th>ID</th>
