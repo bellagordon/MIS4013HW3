@@ -12,7 +12,7 @@
 </div>
 
 
-<div class="table-responsive">
+<div class="table-responsive border-info">
   <table class="table">
     <thead>
       <tr>
