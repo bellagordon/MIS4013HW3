@@ -23,6 +23,19 @@ h3,h4,h5 {
    position: relative;
 }
 
+ .calendar-header {
+    background-color: #ADD8E6; /* Light Blue */
+  }
+  .calendar-cells .col {
+    background-color: #E0F7FA; /* Light Blue cells */
+  }
+  .prev-button, .next-button {
+    color: #0097A7; /* Darker blue for the navigation buttons */
+  }
+  #emptyFormTitle, #addForm h4 {
+    color: #0097A7; /* Light blue for the text */
+  }
+
 .header-title {
    padding-left: 15%;
 }
