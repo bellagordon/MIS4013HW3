@@ -3,14 +3,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <style>
-    body, .container {  
-  background-color: #add8e6 !important; 
-    }
-      body, .container-fluid {  
-  background-color: #add8e6 !important; 
-    }
-    </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> <?=$pageTitle?> </title>
