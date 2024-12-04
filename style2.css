@@ -59,7 +59,7 @@ h3,h4,h5 {
    font-family: 'Roboto', sans-serif;
    font-weight: 300;
    text-align: center;
-   background-color: #4b6289 !important;
+   background-color: ##77b1d4 !important;
    position: relative;
    overflow: hidden;
 }
@@ -69,7 +69,7 @@ h3,h4,h5 {
    top: 100%;
    width: 100%;
    height: 100%;
-   background-color: #4b5889 !important;
+   background-color: ##77b1d4 !important;
    transition: top 0.5s cubic-bezier(1, 0, 0, 1);
    padding: 0 5px 0 5px;
 }
@@ -112,7 +112,7 @@ h3,h4,h5 {
 
 .sidebar-wrapper {
    color: #fff;
-   background-color: #5a649c !important;
+   background-color: ##77b1d4 !important;
    padding-top: 0;
    padding-bottom: 20px;
    font-family: 'Roboto', sans-serif;
