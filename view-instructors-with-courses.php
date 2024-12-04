@@ -32,7 +32,7 @@
     <?php
   }
   ?>
+</div>
 <?php 
 include "org-chart.php";
 ?>
-</div>
