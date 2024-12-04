@@ -7,7 +7,7 @@ include "view-header.php";
  
 <div class="card text-center">
   <div class="card-header">
-    Hospital Database
+    <h2>Hospital Database</h2>
   </div>
   <div class="card-body">
     <h1 class="card-title">Seattle Grace Hospital</h1>
