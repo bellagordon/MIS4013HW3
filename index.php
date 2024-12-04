@@ -5,7 +5,7 @@ include "view-header.php";
 ?>
 <div class="w-auto p-3">
  
-<div class="card text-bg-info mb-3 text-center border-light opacity-50">
+<div class="card text-center border-info opacity-50">
   <div class="card-header">
     <h2>Hospital Database</h2>
   </div>
@@ -20,7 +20,7 @@ include "view-header.php";
 </div>
 </div>
 <div class="card text-bg-dark">
-  <img src="https://home.adelphi.edu/~kr21836/Greys4.jpg" class="card-img" style="height: 300px; opacity: 0.5;">
+  <img src="https://home.adelphi.edu/~kr21836/Greys4.jpg" class="card-img" style="height: 300px; width: 300px; opacity: 0.5;">
   <div class="card-img-overlay">
     <h1 class="card-title">Seattle Grace Hospital/h1>
     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
