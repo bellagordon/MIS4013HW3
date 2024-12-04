@@ -4,7 +4,7 @@ $pageTitle = "Home";
 include "view-header.php";
 ?>
 <div class="w-auto p-3">
-<div class="card text-center" style="width: 30rem; text">
+<div class="card text-center" style="width: 30rem;">
   <div class="card-header">
     Hospital Database
   </div>
