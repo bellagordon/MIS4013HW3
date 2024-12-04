@@ -4,7 +4,7 @@ $pageTitle = "Home";
 include "view-header.php";
 ?>
 <div class="card text-bg-dark">
-  <img src="https://i.pinimg.com/originals/bb/f4/36/bbf436ca82996113de846c2caea1cf22.jpg" class="card-img" style="height: 300px; width: auto; object-fit: cover; opacity: 0.5;">
+  <img src="https://i.pinimg.com/originals/bb/f4/36/bbf436ca82996113de846c2caea1cf22.jpg" class="card-img" style="height: 350px; width: auto; object-fit: cover; opacity: 0.5;">
   <div class="card-img-overlay">
     <h1 class="card-title">Seattle Grace Hospital</h1>
     <p class="card-text">Seattle Grace Hospital is a renowned teaching hospital in Seattle, known for its groundbreaking medical advancements and exceptional patient care.</p>
