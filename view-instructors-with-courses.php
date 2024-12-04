@@ -37,7 +37,10 @@
 <!-- Adding Nurses Section -->
 <div class="card-group">
   <?php
-  while ($course = $courses->fetch_assoc()) { // Assuming you are fetching patient data here
+  // Assuming $courses is already fetched in the first loop, ensure that courses have been reset or fetched again
+  $courses = selectCoursesByInstructor($instructor['doctor_id']);  // Fetch the courses again if needed
+  
+  while ($course = $courses->fetch_assoc()) { // Loop through each course (patient)
     ?>
     <div class="card border-info mb-3">
       <div class="card-body">
@@ -49,13 +52,18 @@
           <div class="card card-body">
             <ul class="list-group">
               <?php
-              $sections = selectSectionsByCourse($course['patient_id']); // Fetch nurses for each patient
-              while ($section = $sections->fetch_assoc()) {
-                ?>
-                <li class="list-group-item">
-                  <?php echo $section['nurse_name']; ?> - <?php echo $section['room']; ?> - <?php echo $section['day_time']; ?>
-                </li>
-                <?php
+              // Fetch sections (nurses) based on the course (patient)
+              $sections = selectSectionsByCourse($course['patient_id']);
+              if ($sections->num_rows > 0) { // Check if there are any nurses assigned to this patient
+                while ($section = $sections->fetch_assoc()) {
+                  ?>
+                  <li class="list-group-item">
+                    <?php echo $section['nurse_name']; ?> - <?php echo $section['room']; ?> - <?php echo $section['day_time']; ?>
+                  </li>
+                  <?php
+                }
+              } else {
+                echo "<li class='list-group-item'>No nurses assigned.</li>";
               }
               ?>
             </ul>
