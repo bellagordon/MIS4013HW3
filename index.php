@@ -3,7 +3,6 @@
 $pageTitle = "Home";
 include "view-header.php";
 ?>
- <span class="border border-info border-4">
 <div class="w-auto p-3">
  
 <div class="card text-center">
@@ -20,7 +19,6 @@ include "view-header.php";
   </div>
 </div>
 </div>
- </span>      
 <?php
  include "timesheet.php";
 include "view-footer.php";
