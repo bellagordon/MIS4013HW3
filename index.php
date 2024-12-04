@@ -3,6 +3,14 @@
 $pageTitle = "Home";
 include "view-header.php";
 ?>
+<div class="card text-bg-dark">
+  <img src="https://i.pinimg.com/originals/bb/f4/36/bbf436ca82996113de846c2caea1cf22.jpg" class="card-img" style="height: 300px; width: auto; object-fit: cover; opacity: 0.5;">
+  <div class="card-img-overlay">
+    <h1 class="card-title">Seattle Grace Hospital</h1>
+    <p class="card-text">Seattle Grace Hospital is a renowned teaching hospital in Seattle, known for its groundbreaking medical advancements and exceptional patient care.</p>
+   <p class="card-text">With a dedicated team of skilled professionals, we strive to innovate, heal, and shape the future of medicine.</p>
+  </div>
+ 
 <div class="w-auto p-3">
  
 <div class="card text-center border-info opacity-50">
@@ -19,12 +27,6 @@ include "view-header.php";
   </div>
 </div>
 </div>
-<div class="card text-bg-dark">
-  <img src="https://i.pinimg.com/originals/bb/f4/36/bbf436ca82996113de846c2caea1cf22.jpg" class="card-img" style="height: 300px; width: auto; object-fit: cover; opacity: 0.5;">
-  <div class="card-img-overlay">
-    <h1 class="card-title">Seattle Grace Hospital</h1>
-    <p class="card-text">Seattle Grace Hospital is a renowned teaching hospital in Seattle, known for its groundbreaking medical advancements and exceptional patient care. With a dedicated team of skilled professionals, we strive to innovate, heal, and shape the future of medicine.</p>
-  </div>
 </div>
 <?php
  include "timesheet.php";
