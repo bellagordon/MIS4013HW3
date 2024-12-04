@@ -14,6 +14,21 @@ function selectCourses() {
     }
 }
 
+function selectNursesForInput() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT nurse_id, nurse_name FROM section order by nurse_name");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+
 function insertCourse($cName, $cDesc) {
     try {
         $conn = get_db_connection();
