@@ -32,7 +32,7 @@ function selectPatientsForInput() {
 function insertInstructor($iName, $iNum, $cName) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `hw3_database`.`instructor` (`doctor_name`, `office_number`, `patient_name`) VALUES ( ?, ?)");
+        $stmt = $conn->prepare("INSERT INTO `hw3_database`.`instructor` (`doctor_name`, `office_number`, `patient_name`) VALUES ( ?, ?, ?)");
         $stmt->bind_param("ss", $iName, $iNum, $cName);
         $success = $stmt->execute();
         $conn->close();
