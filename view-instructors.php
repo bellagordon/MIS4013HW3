@@ -13,7 +13,7 @@
 
 <div class="table-responsive">
 
-  <table class="table table-primary table-striped w-100">
+  <table class="table table-info table-striped table-bordered border-light w-100">
     <thead>
       <tr>
         <th>ID</th>
