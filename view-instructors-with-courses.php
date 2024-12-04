@@ -33,6 +33,8 @@
     <?php
   }
   ?>
+</div>
+<div class="card-group">
 <?php
   while ($section = $sections->fetch_assoc()) {
     ?>
