@@ -21,6 +21,10 @@
            'Richard Webber', 'Chief Resident'],
           [{'v':'Christina Yang', 'f':'Christina Yang<div style="color:red; font-style:italic">Head Cardiologist</div>'},
            'Miranda Bailey', 'Cardio'],
+          [{'v':'Meredith Grey', 'f':'Meredith Grey<div style="color:red; font-style:italic">Attending General Surgeon</div>'},
+           'Miranda Bailey', 'Gen'],
+          [{'v':'Amelia Shepherd', 'f':'Amelia Shepherd<div style="color:red; font-style:italic">Attending Neurosurgeon</div>'},
+           'Derek Shepherd', 'Att Neuro'],
         ]);
 
         // Create the chart.
