@@ -14,7 +14,7 @@ include "view-header.php";
   </div>
 </div>
 
-<div class="w-auto p-3">
+<div class="w-100 p-3">
   <div class="card text-center border-info">
     <div class="card-header">
       <h2>Hospital Database</h2>
