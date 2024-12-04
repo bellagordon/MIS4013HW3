@@ -5,9 +5,7 @@
     <h1>Doctors</h1>
   </div>
   <div class="col-auto">
-    <?php 
-  include "view-instructors-newform.php";
-      ?>
+    
   </div>
 </div>
 
@@ -19,6 +17,11 @@
         <th>ID</th>
       <th>Name</th>
       <th>Office</th>
+        <th> 
+        <?php 
+        include "view-instructors-newform.php";
+        ?>
+        </th>
         <th></th>
         <th></th>
         <th></th>
