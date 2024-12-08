@@ -38,16 +38,16 @@
 <div class="card-group">
 
   <?php
-  while ($instructor = $instructors->fetch_assoc()) {
+  while ($section = $sections->fetch_assoc()) {
     ?>
     <div class="card border-info mb-3">
       <div class="card-body">
-        <h5 class="card-title"><?php echo $instructor['doctor_name']; ?></h5>
-        <p class="card-text">Office: <?php echo $instructor['office_number']; ?></p>
-        <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?php echo $instructor['doctor_id']; ?>" aria-expanded="false" aria-controls="collapse<?php echo $instructor['doctor_id']; ?>">
+        <h5 class="card-title"><?php echo $section['nurse_name']; ?></h5>
+        <p class="card-text"> </p>
+        <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?php echo $section['nurse_id']; ?>" aria-expanded="false" aria-controls="collapse<?php echo $section['nurse_id']; ?>">
           View Patients
         </button>
-        <div class="collapse mt-3" id="collapse<?php echo $instructor['doctor_id']; ?>">
+        <div class="collapse mt-3" id="collapse<?php echo $section['nurse_id']; ?>">
           <div class="card card-body">
             <ul class="list-group">
               <?php
