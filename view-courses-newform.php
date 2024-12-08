@@ -32,7 +32,7 @@
               <?php
               $nurseList = selectNursesForInput();
               $selectedNurse = 0;
-                  include "view-nurse-input-list.php"
+                  include "view-nurses-input-list.php"
               ?>
                               
               </div>
