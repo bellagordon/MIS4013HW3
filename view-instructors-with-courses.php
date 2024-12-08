@@ -16,7 +16,7 @@
           <div class="card card-body">
             <ul class="list-group">
               <?php
-              $courses = selectCoursesByInstructor($instructor['doctor_id']);
+              $courses = selectCoursesBySection($section['nurse_id']);
               while ($course = $courses->fetch_assoc()) {
                 ?>
                 <li class="list-group-item">
