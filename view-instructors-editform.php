@@ -24,7 +24,7 @@
               <input type="text" class="form-control" id="iNum <?php echo $instructor['doctor_id']; ?>" name="iNum" value = "<?php echo $instructor['office_number']; ?>" >
             </div>
               <div class="mb-3">
-              <label for="cid <?php echo $section['patient_id']; ?>" class="form-label">Patient</label>
+              <label for="iid <?php echo $course['patient_id']; ?>" class="form-label">Patient</label>
               <?php
               $patientList = selectPatientsForInput();
               $selectedPatient = 0;
