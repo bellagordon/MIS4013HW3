@@ -1,5 +1,6 @@
 
 
+
 <?php
 function selectInstructors() {
     try {
@@ -29,31 +30,33 @@ function selectPatientsForInput() {
     }
 }
 
-function insertInstructor($iName, $iNum, $cid) {
-    global $db;
-    $query = "INSERT INTO instructor (doctor_name, office_number, patient_id) 
-              VALUES (:iName, :iNum, :cid)";
-    $stmt = $db->prepare($query);
-    $stmt->bindValue(':iName', $iName);
-    $stmt->bindValue(':iNum', $iNum);
-    $stmt->bindValue(':cid', $cid); // Link to patient ID
-    return $stmt->execute();
+function insertInstructor($iName, $iNum) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("INSERT INTO `hw3_database`.`instructor` (`doctor_name`, `office_number`) VALUES ( ?, ?)");
+        $stmt->bind_param("ss", $iName, $iNum);
+        $success = $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
 }
 
-
-function editInstructor($iName, $iNum, $iid, $cid) {
-    global $db;
-    $query = "UPDATE instructor 
-              SET doctor_name = :iName, office_number = :iNum, patient_id = :cid 
-              WHERE doctor_id = :iid";
-    $stmt = $db->prepare($query);
-    $stmt->bindValue(':iName', $iName);
-    $stmt->bindValue(':iNum', $iNum);
-    $stmt->bindValue(':cid', $cid); // Link to patient ID
-    $stmt->bindValue(':iid', $iid);
-    return $stmt->execute();
+function editInstructor($iName, $iNum, $iid) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("UPDATE `hw3_database`.`instructor` set `doctor_name` = ?, `office_number` = ?  WHERE doctor_id =?");
+        $stmt->bind_param("ssi",$iName, $iNum, $iid);
+        $success = $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
 }
-
 
 function deleteInstructor($iid) {
     try {
