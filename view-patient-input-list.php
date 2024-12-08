@@ -1,5 +1,5 @@
 
-<select class="form-select" id="cid_<?php echo $instructor['doctor_id']; ?>" name="cid">    
+<select class="form-select" id="iid_<?php echo $instructor['doctor_id']; ?>" name="iid">    
 <?php while ($patientItem = $patientList->fetch_assoc()): ?>
         <option value="<?php echo htmlspecialchars($patientItem['patient_id']); ?>" 
             <?php echo ($selectedPatient == $patientItem['patient_id']) ? 'selected' : ''; ?>>
