@@ -1,6 +1,7 @@
 
 
 
+
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#newSectionModal">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-plus" viewBox="0 0 16 16">
@@ -37,11 +38,7 @@
            </div>
             <div class="mb-3">
               <label for="sName" class="form-label">Nurse</label>
-                   <?php 
-                  $sectionList = selectSectionsForInput();
-                  $selectedSection = 0;
-                  include "view-section-input-list.php";
-                  ?>       
+              <input type="text" class="form-control" id="sName" name="sName">
             </div>
             <div class="mb-3">
               <label for="room" class="form-label">Room</label>
