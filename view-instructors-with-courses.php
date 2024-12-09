@@ -1,5 +1,5 @@
 
-<?php include "view-instructors-with-courses-newform.php" ?>
+
 <h1 class="text-center">Doctors</h1>
 <div class="card-group" style="max-width: 800px; border: 2px solid #17a2b8; background-color: rgba(0, 123, 255, 0.1);">
   <?php
@@ -7,6 +7,7 @@
     ?>
     <div class="card border-info mb-3">
       <div class="card-body">
+        <?php include "view-instructors-with-courses-newform.php" ?>
         <h5 class="card-title"><?php echo $instructor['doctor_name']; ?></h5>
         <p class="card-text">Office: <?php echo $instructor['office_number']; ?></p>
         <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?php echo $instructor['doctor_id']; ?>" aria-expanded="false" aria-controls="collapse<?php echo $instructor['doctor_id']; ?>">
@@ -33,7 +34,6 @@
     <?php
   }
   ?>
-</div>
 
   <div class="d-flex justify-content-center mb-3">
   <div class="card" style="max-width: 800px; border: 2px solid #17a2b8; background-color: rgba(0, 123, 255, 0.1);">
@@ -43,4 +43,5 @@
       ?>
     </div>
   </div>
+</div>
 </div>
