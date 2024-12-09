@@ -1,8 +1,7 @@
 
 
 <h1 class="text-center">Doctors</h1>
-<div class="card-group">
-
+<div class="card-group" style="max-width: 800px; border: 2px solid #17a2b8; background-color: rgba(0, 123, 255, 0.1);">
   <?php
   while ($instructor = $instructors->fetch_assoc()) {
     ?>
@@ -26,9 +25,6 @@
                 <?php
               }
               ?>
-            <li> 
-              <?php include "view-instructors-with-courses-newform.php" ?>
-            </li>
             </ul>
           </div>
         </div>
@@ -37,11 +33,10 @@
     <?php
   }
   ?>
+  <?php include "view-instructors-with-courses-newform.php" ?>
 </div>
 
-
-
-<div class="d-flex justify-content-center mb-3">
+  <div class="d-flex justify-content-center mb-3">
   <div class="card" style="max-width: 800px; border: 2px solid #17a2b8; background-color: rgba(0, 123, 255, 0.1);">
     <div class="card-body">
       <?php 
