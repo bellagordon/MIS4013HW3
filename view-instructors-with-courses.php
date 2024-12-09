@@ -1,7 +1,6 @@
 
 <h1 class="text-center">All Records</h1>
 <?php include "view-instructors-with-courses-newform.php" ?>
-<?php include "view-instructors-with-courses-editform.php" ?>
 
 <div class="card-group" style="max-width: 800px; border: 2px solid #17a2b8; background-color: rgba(0, 123, 255, 0.1);">
   <?php
@@ -27,6 +26,9 @@
                 <?php
               }
               ?>
+              <li>
+                <?php include "view-instructors-with-courses-editform.php" ?>
+              </li>
             </ul>
           </div>
         </div>
