@@ -16,7 +16,11 @@
         <form method="post" action="">
           <div class="mb-3">
             <label for="iid<?php echo $course['doctor_id']; ?>" class="form-label">Doctor</label>
-            <input type="text" class="form-control" id="iid<?php echo $course['doctor_id']; ?>" name="iid" value="<?php echo $course['doctor_id']; ?>">
+                <?php 
+                  $instructorList = selectInstructorsForInput();
+                  $selectedInstructor = $course['doctor_id'];
+                  include "view-instructor-input-list.php";
+                  ?>
           </div>
           <div class="mb-3">
             <label for="cid<?php echo $course['doctor_id']; ?>" class="form-label">Patient</label>
