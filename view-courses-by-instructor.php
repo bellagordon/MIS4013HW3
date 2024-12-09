@@ -6,8 +6,11 @@
         <th>ID</th>
       <th>Number</th>
       <th>Description</th>
+        <th>Nurse</th>
+      <th>Doctor</th>
         <th>Room</th>
         <th>Day / Time </th>
+        
       
 
       </tr>
@@ -20,6 +23,10 @@ while ($course = $courses->fetch_assoc()) {
     <td><?php echo $course['patient_id']; ?></td>
     <td><?php echo $course['patient_name']; ?></td>
     <td><?php echo $course['patient_description']; ?></td>
+    <td><?php echo $course['nurse_id']; ?></td>
+    <td><?php echo $course['doctor_id']; ?></td>
+    <td><?php echo $course['room']; ?></td>
+    <td><?php echo $course['time']; ?></td>
   </tr>
   <?php
 }
