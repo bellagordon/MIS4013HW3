@@ -37,7 +37,7 @@
                 <?php
               }
               ?>
-              
+            <?php include "view-instructors-with-courses-editform.php"; ?>
             </ul>
           </div>
         </div>
