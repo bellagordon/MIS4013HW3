@@ -23,15 +23,7 @@
                 <li class="list-group-item">
                   <?php echo $course['patient_name']; ?> - <?php echo $course['room']; ?> - <?php echo $course['day_time']; ?>
                 </li>
-                 <li>
-                  <form method="post" action="view-instructors-with-courses-editform.php">
-                    <input type="hidden" name="sid" value="<?php echo $course['nurse_id']; ?>">
-                    <input type="hidden" name="actionType" value="Edit">
-                    <button type="submit" class="btn btn-outline-primary btn-sm">
-                      Edit Nurse
-                    </button>
-                  </form>
-                </li>
+               
               <li>
                  <form method="post" action="">
               <input type="hidden" name="sid" value="<?php echo $course['nurse_id']; ?>">
