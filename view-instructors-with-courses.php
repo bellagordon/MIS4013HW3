@@ -2,7 +2,7 @@
 
 <h1 class="text-center">Doctors</h1>
 <div class="card-group">
-
+<?php include "view-instructors-with-courses-newform.php" ?>
   <?php
   while ($instructor = $instructors->fetch_assoc()) {
     ?>
@@ -26,9 +26,6 @@
                 <?php
               }
               ?>
-            <li> 
-              <?php include view-instructors-with-courses-newform.php ?>
-            </li>
             </ul>
           </div>
         </div>
@@ -38,6 +35,7 @@
   }
   ?>
 </div>
+
 
 
 <div class="d-flex justify-content-center mb-3">
