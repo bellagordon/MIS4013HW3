@@ -62,7 +62,7 @@ function insertSection($iid, $cid, $sName, $room, $time ) {
 function editSection($iid, $cid, $sName, $room, $time, $sid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("UPDATE `hw3_database`.`section` set `doctor_id` = ?, `patient_id` = ?, `nurse_name` = ?, `room` = ?, `day_time` = ? WHERE nurse_id =?");
+        $stmt = $conn->prepare("UPDATE `hw3_database`.`section` set `doctor_id` = ?, `patient_id` = ?, `nurse_name` = ?, `room` = ?, `day_time` = ? WHERE doctor_id =?");
         $stmt->bind_param("iissssi",$iid, $cid, $sName, $room, $time, $sid);
         $success = $stmt->execute();
         $conn->close();
