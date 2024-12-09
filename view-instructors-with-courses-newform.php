@@ -37,7 +37,11 @@
            </div>
             <div class="mb-3">
               <label for="sName" class="form-label">Nurse</label>
-              <input type="text" class="form-control" id="sName" name="sName">
+                   <?php 
+                  $sectionList = selectSectionsForInput();
+                  $selectedSection = 0;
+                  include "view-section-input-list.php";
+                  ?>       
             </div>
             <div class="mb-3">
               <label for="room" class="form-label">Room</label>
