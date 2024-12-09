@@ -21,7 +21,10 @@
         <form method="post" action="">
             <div class="mb-3">
               <label for="iid" class="form-label">Doctor</label>
-              <input type="text" class="form-control" id="iid" name="iid">
+              <?php 
+                  $instructorList = selecInstructorForInput();
+                  include "view-instructor-input-list.php";
+                  ?>
             </div>
            <div class="mb-3">
               <label for="cid" class="form-label">Patient</label>
