@@ -26,8 +26,8 @@
               }
               ?>
             <li> 
-              <?php include view-instructors-with-courses-newform.php ?>
-              <?php include view-instructors-with-courses-editform.php ?>
+              <?php include "view-instructors-with-courses-newform.php" ?>
+              <?php include "view-instructors-with-courses-editform.php" ?>
             </li>
             </ul>
           </div>
