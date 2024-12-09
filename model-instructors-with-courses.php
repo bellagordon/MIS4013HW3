@@ -29,6 +29,20 @@ function selectCoursesbyInstructor($iid) {
 }
 
 
+function insertSection($iid, $cid, $sName, $room, $time ) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("INSERT INTO `hw3_database`.`section` (`doctor_id`, `patient_id`, `nurse_name`, `room`, `day_time`) VALUES ( ?, ?, ?, ?, ?)");
+        $stmt->bind_param("ss", $iid, $cid, $sName, $room, $time);
+        $success = $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
 
 
 
