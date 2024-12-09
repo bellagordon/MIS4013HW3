@@ -23,11 +23,11 @@
               <input type="text" class="form-control" id="iid" name="iid">
             </div>
          <div class="mb-3">
-              <label for="cid" class="form-label">Patient</label>
-              <input type="text" class="form-control" id="cid" name="cid">
+              <label for="cName" class="form-label">Patient Name</label>
+              <input type="text" class="form-control" id="cName" name="cName">
             </div>
             <div class="mb-3">
-              <label for="sName" class="form-label">Nurse</label>
+              <label for="sName" class="form-label">Nurse Name</label>
               <input type="text" class="form-control" id="sName" name="sName">
             </div>
             <div class="mb-3">
