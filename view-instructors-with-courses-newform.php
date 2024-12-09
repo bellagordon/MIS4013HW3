@@ -24,8 +24,12 @@
             </div>
            <div class="mb-3">
               <label for="cid" class="form-label">Patient</label>
-              <input type="text" class="form-control" id="cid" name="cid">
-            </div>
+              <?php
+              $patientList = selectPatientsForInput();
+              $selectedPatient = 0;
+                  include "view-patient-input-list.php"
+              ?>            
+              </div>
             <div class="mb-3">
               <label for="sName" class="form-label">Nurse</label>
               <input type="text" class="form-control" id="sName" name="sName">
