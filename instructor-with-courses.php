@@ -3,7 +3,7 @@
 require_once("util-db.php");
 require_once("model-instructors-with-courses.php");
 
-$pageTitle = "Doctors with Patients";
+$pageTitle = "All Records";
 include "view-header.php";
 
 if (isset($_POST['actionType'])) {
