@@ -32,7 +32,6 @@
     <?php
   }
   ?>
-  <?php include "view-instructors-with-courses-newform.php" ?>
 </div>
 
   <div class="d-flex justify-content-center mb-3">
