@@ -16,7 +16,7 @@ if (isset($_POST['actionType'])) {
       }
       break;
      case "Edit":
-      if (editSection($_POST['iid'], $_POST['cid'], $_POST['sName'], $_POST['room'], $_POST['time'])) {
+      if (editSection($_POST['iid'], $_POST['cid'], $_POST['sName'], $_POST['room'], $_POST['time'], $_POST['sid'])) { // Fixed to include sid
         echo '<div class="alert alert-success" role="alert"> Record edited! </div>';
       } else {
          echo '<div class="alert alert-danger" role="alert"> Error </div>';
