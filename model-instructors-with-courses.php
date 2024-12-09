@@ -65,7 +65,7 @@ function selectInstructorsForInput() {
 }
 
 
-function selectInstructorsForInput() {
+function selectCoursesForInput() {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT patient_id, patient_name FROM course order by patient_name");
