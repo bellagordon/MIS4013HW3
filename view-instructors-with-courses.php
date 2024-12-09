@@ -36,7 +36,7 @@
 </div>
 
   <div class="d-flex justify-content-center mb-3">
-  <div class="card" style="max-width: 800px; border: 2px solid #17a2b8; background-color: rgba(0, 123, 255, 0.1);">
+  <div class="card">
     <div class="card-body">
       <?php 
       include "org-chart.php";
