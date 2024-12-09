@@ -19,7 +19,25 @@ function selectInstructors() {
 function selectCoursesbyInstructor($iid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT c.patient_id, patient_name, patient_description, room, day_time, nurse_id, s.doctor_id FROM course c join section s on s.patient_id = c.patient_id where s.doctor_id=?");
+        $stmt = $conn->prepare("
+            SELECT 
+                c.patient_id, 
+                c.patient_name, 
+                c.patient_description, 
+                s.room, 
+                s.day_time, 
+                s.nurse_id, 
+                s.nurse_name, 
+                s.doctor_id 
+            FROM 
+                course c 
+            INNER JOIN 
+                section s 
+            ON 
+                c.patient_id = s.patient_id 
+            WHERE 
+                s.doctor_id = ?
+        ");
         $stmt->bind_param("i", $iid);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -30,6 +48,7 @@ function selectCoursesbyInstructor($iid) {
         throw $e;
     }
 }
+
 
 function selectInstructorsForInput() {
     try {
