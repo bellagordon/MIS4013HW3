@@ -24,7 +24,11 @@
           </div>
           <div class="mb-3">
             <label for="cid<?php echo $course['doctor_id']; ?>" class="form-label">Patient</label>
-            <input type="text" class="form-control" id="cid<?php echo $course['doctor_id']; ?>" name="cid" value="<?php echo $course['patient_id']; ?>">
+                   <?php 
+                  $courseList = selectCoursesForInput();
+                  $selectedCourse = $course['patient_id'];
+                  include "view-course-input-list.php";
+                  ?>          
           </div>
           <div class="mb-3">
             <label for="sName<?php echo $course['doctor_id']; ?>" class="form-label">Nurse</label>
