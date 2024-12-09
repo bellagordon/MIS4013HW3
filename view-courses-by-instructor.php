@@ -20,9 +20,6 @@ while ($course = $courses->fetch_assoc()) {
     <td><?php echo $course['patient_id']; ?></td>
     <td><?php echo $course['patient_name']; ?></td>
     <td><?php echo $course['patient_description']; ?></td>
-    
-    <td><?php echo $course['room']; ?></td>
-    <td><?php echo $course['day_time']; ?></td>
   </tr>
   <?php
 }
