@@ -22,14 +22,10 @@
               <label for="iid" class="form-label">Doctor</label>
               <input type="text" class="form-control" id="iid" name="iid">
             </div>
-           <div class="mb-3">
+         <div class="mb-3">
               <label for="cid" class="form-label">Patient</label>
-              <?php
-              $patientList = selectPatientsForInput();
-              $selectedPatient = 0;
-                  include "view-patient-input-list.php"
-              ?>            
-              </div>
+              <input type="text" class="form-control" id="cid" name="cid">
+            </div>
             <div class="mb-3">
               <label for="sName" class="form-label">Nurse</label>
               <input type="text" class="form-control" id="sName" name="sName">
