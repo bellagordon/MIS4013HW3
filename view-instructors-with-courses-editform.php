@@ -36,7 +36,7 @@
               <label for="time<?php echo $course['nurse_id']; ?>" class="form-label">Day / Time</label>
               <input type="text" class="form-control" id="time<?php echo $course['nurse_id']; ?>" name="time" value = "<?php echo $course['day_time']; ?>" >
             </div>
-             <input type="hidden" name="iid" value = "<?php echo $section['doctor_id']; ?>" >
+             <input type="hidden" name="iid" value = "<?php echo $course['nurse_id']; ?>" >
               <input type ="hidden" name="actionType" value="Edit">
             <button type="submit" class="btn btn-primary">Save</button>
        </form>
