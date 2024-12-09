@@ -22,7 +22,7 @@
             <div class="mb-3">
               <label for="iid" class="form-label">Doctor</label>
               <?php 
-                  $instructorList = selecInstructorForInput();
+                  $instructorList = selecInstructorsForInput();
                   include "view-instructor-input-list.php";
                   ?>
             </div>
