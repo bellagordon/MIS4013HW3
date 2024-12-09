@@ -26,9 +26,6 @@
                 <?php
               }
               ?>
-              <li>
-                <?php include "view-instructors-with-courses-editform.php" ?>
-              </li>
             </ul>
           </div>
         </div>
