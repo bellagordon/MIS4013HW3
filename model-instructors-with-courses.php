@@ -57,5 +57,19 @@ function editSection($iid, $cid, $sName, $room, $time, $sid) {
     }
 }
 
+function deleteSection($sid) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("DELETE FROM `hw3_database`.`section` WHERE nurse_id = ?");
+        $stmt->bind_param("i",$sid);
+        $success = $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
 
 ?>
