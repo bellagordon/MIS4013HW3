@@ -29,8 +29,12 @@
             </div>
            <div class="mb-3">
               <label for="cid" class="form-label">Patient</label>
-              <input type="text" class="form-control" id="cid" name="cid">
-            </div>
+             <?php 
+                  $courseList = selectCoursesForInput();
+                  $selectedCourse = 0;
+                  include "view-course-input-list.php";
+                  ?>            
+           </div>
             <div class="mb-3">
               <label for="sName" class="form-label">Nurse</label>
               <input type="text" class="form-control" id="sName" name="sName">
