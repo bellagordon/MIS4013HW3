@@ -27,15 +27,7 @@
               <label for="cDesc" class="form-label">Patient Description</label>
               <input type="text" class="form-control" id="cDesc" name="cDesc">
             </div>
-               <div class="mb-3">
-              <label for="cid" class="form-label">Nurse</label>
-              <?php
-              $nurseList = selectNursesForInput();
-              $selectedNurse = 0;
-                  include "view-nurses-input-list.php"
-              ?>
-                              
-              </div>
+             
               <input type ="hidden" name="actionType" value="Add">
             <button type="submit" class="btn btn-primary">Save</button>
        </form>
