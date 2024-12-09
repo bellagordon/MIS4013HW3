@@ -23,7 +23,7 @@
                   <?php echo $course['patient_name']; ?> - <?php echo $course['room']; ?> - <?php echo $course['day_time']; ?>
                 </li>
                  <li>
-                  <form method="post" action="edit-nurse.php">
+                  <form method="post" action="view-instructors-with-courses-editform.php">
                     <input type="hidden" name="nurse_id" value="<?php echo $course['nurse_id']; ?>">
                     <input type="hidden" name="actionType" value="Edit">
                     <button type="submit" class="btn btn-outline-primary btn-sm">
