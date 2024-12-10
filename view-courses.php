@@ -17,7 +17,7 @@
         <th>ID</th>
       <th>Name</th>
       <th>Description</th>
-        <th></th>
+        <th>Assigned Nurse</th>
          <th></th>
          <th></th>
 
@@ -34,7 +34,7 @@ while ($course = $courses->fetch_assoc()) {
       <td>
       <form method="post" action="sections-by-course.php">
         <input type = "hidden" name = "cid" value ="<?php echo $course['patient_id']; ?>">
-        <button type="submit" class="btn btn-light border border-info-subtle border-2">Assigned Nurse</button>
+        <button type="submit" class="btn btn-light border border-info-subtle border-2">View Admittance Record</button>
       </form>
    </td>
      <td>
