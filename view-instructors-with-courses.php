@@ -51,12 +51,13 @@
     <?php
   }
   ?>
-<div class="d-flex justify-content-center mb-3">
-  <div class="card" style="width: 100%; max-width: 800px; border: none;">
-    <div class="card-body">
-      <?php include "org-chart.php"; ?>
-    </div>
-  </div>
-</div>
-</div>
 
+    <!-- Org Chart with border and opaque white background -->
+    <div class="d-flex justify-content-center mb-3">
+      <div class="card" style="width: 100%; max-width: 800px; border: 1px solid #17a2b8; background-color: rgba(255, 255, 255, 0.8);">
+        <div class="card-body">
+          <?php include "org-chart.php"; ?>
+        </div>
+      </div>
+    </div>
+</div>
