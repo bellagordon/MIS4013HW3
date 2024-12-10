@@ -36,14 +36,14 @@
             <input type="text" class="form-control" id="sName<?php echo $course['doctor_id']; ?>" name="sName" value="<?php echo $course['nurse_name']; ?>">
           </div>
           <div class="mb-3">
-            <label for="room<?php echo $course['doctor_id']; ?>" class="form-label">Room</label> <!-- Fixed typo -->
-            <input type="text" class="form-control" id="room<?php echo $course['doctor_id']; ?>" name="room" value="<?php echo $course['room']; ?>"> <!-- Fixed typo -->
+            <label for="room<?php echo $course['doctor_id']; ?>" class="form-label">Room</label> 
+            <input type="text" class="form-control" id="room<?php echo $course['doctor_id']; ?>" name="room" value="<?php echo $course['room']; ?>"
           </div>
           <div class="mb-3">
             <label for="time<?php echo $course['doctor_id']; ?>" class="form-label">Day / Time</label>
             <input type="text" class="form-control" id="time<?php echo $course['doctor_id']; ?>" name="time" value="<?php echo $course['day_time']; ?>">
           </div>
-          <input type="hidden" name="sid" value="<?php echo $course['nurse_id']; ?>"> <!-- Added hidden input -->
+          <input type="hidden" name="sid" value="<?php echo $course['nurse_id']; ?>"> 
           <input type="hidden" name="actionType" value="Edit">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
