@@ -258,5 +258,5 @@ function renderCalendar(){
 
 $( document ).ready(function() {
 	renderCalendar();
-	$("#calendar-title").text("Basic Interactive D3 Calendar - "+today.getFullYear());
+	$("#calendar-title").text("Patient Frequency - "+today.getFullYear());
 });
