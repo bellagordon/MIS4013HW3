@@ -1,7 +1,7 @@
 <h1 class="text-center">All Records</h1>
 
 <!-- Container with blue background -->
-<div style="background-color: rgba(0, 123, 255, 0.1); padding: 20px;">
+<div class="bg info" style="padding: 20px;">
   
   <!-- Add New Doctor Button -->
   <div class="d-flex justify-content-between align-items-center mb-3" style="padding: 0 10px;">
