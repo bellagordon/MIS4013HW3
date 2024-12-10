@@ -51,7 +51,7 @@
   
  <style>
       .bordered-container {
-        border: 2px solid black;
+        border: 6px solid lightblue;
         padding: 10px;
         margin: 10px;
         border-radius: 8px;
