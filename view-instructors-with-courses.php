@@ -1,12 +1,15 @@
 
 
 <h1 class="text-center">All Records</h1>
-<?php include "view-instructors-with-courses-newform.php" ?>
-<div class="card-group" style="max-width: 800px; border: 2px solid #17a2b8;">
+
+<div class="card-group d-flex justify-content-between align-items-center mb-3" style="padding: 0 10px;">
+   <div></div> <!-- Empty div to balance the layout -->
+  <?php include "view-instructors-with-courses-newform.php" ?>  
+</div>
   <?php
   while ($instructor = $instructors->fetch_assoc()) {
     ?>
-  <div class="card border-info m-2" style="background-color: #ffffff;">
+    <div class="card border-info m-2" style="background-color: #ffffff;"">
       <div class="card-body">
         <h5 class="card-title"><?php echo $instructor['doctor_name']; ?></h5>
         <p class="card-text">Office: <?php echo $instructor['office_number']; ?></p>
@@ -48,14 +51,11 @@
     <?php
   }
   ?>
-
-
-  <div class="d-flex justify-content-center mb-3">
-  <div class="card">
+</div>
+<div class="d-flex justify-content-center mb-3">
+  <div class="card" style="width: 100%; max-width: 800px; border: none;">
     <div class="card-body">
-      <?php 
-      include "org-chart.php";
-      ?>
+      <?php include "org-chart.php"; ?>
     </div>
   </div>
 </div>
