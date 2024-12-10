@@ -2,11 +2,8 @@
 <h1 class="text-center">All Records</h1>
 
 <!-- Container with blue background -->
-<div class="bg info" style="padding: 20px;">
-  
-  <!-- Add New Doctor Button -->
-  <div class="d-flex justify-content-between align-items-center mb-3" style="padding: 0 10px;">
-    <div></div> <!-- Empty div to balance the layout -->
+<div class="p-3 mb-2 bg-info text-dark bg-opacity-10" style="padding: 20px;">
+      <div></div> <!-- Empty div to balance the layout -->
     <?php include "view-instructors-with-courses-newform.php"; ?>  
   </div>
    
@@ -55,11 +52,11 @@
     <?php
   }
   ?>
-</div>
 <div class="d-flex justify-content-center mb-3">
   <div class="card" style="width: 100%; max-width: 800px; border: none;">
     <div class="card-body">
       <?php include "org-chart.php"; ?>
     </div>
   </div>
+</div>
 </div>
