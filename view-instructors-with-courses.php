@@ -1,14 +1,18 @@
-
 <h1 class="text-center">All Records</h1>
 
-<div class="card-group d-flex justify-content-between align-items-center mb-3" style="padding: 0 10px;">
-   <div></div> <!-- Empty div to balance the layout -->
-  <?php include "view-instructors-with-courses-newform.php" ?>  
-</div>
-  <?php
-  while ($instructor = $instructors->fetch_assoc()) {
-    ?>
-    <div class="card border-info m-2" style="background-color: #ffffff;"">
+<!-- Container with blue background -->
+<div style="background-color: rgba(0, 123, 255, 0.1); padding: 20px;">
+  
+  <!-- Add New Doctor Button -->
+  <div class="d-flex justify-content-between align-items-center mb-3" style="padding: 0 10px;">
+    <div></div> <!-- Empty div to balance the layout -->
+    <?php include "view-instructors-with-courses-newform.php"; ?>  
+  </div>
+   
+ <?php while ($instructor = $instructors->fetch_assoc()) 
+    {
+   ?>
+    <div class="card border-info m-2" style="background-color: #ffffff;">
       <div class="card-body">
         <h5 class="card-title"><?php echo $instructor['doctor_name']; ?></h5>
         <p class="card-text">Office: <?php echo $instructor['office_number']; ?></p>
