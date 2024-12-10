@@ -31,6 +31,12 @@ while ($course = $courses->fetch_assoc()) {
    <td><?php echo $course['patient_id']; ?></td>
     <td><?php echo $course['patient_name']; ?></td>
     <td><?php echo $course['patient_description']; ?></td>
+      <td>
+      <form method="post" action="sections-by-course.php">
+        <input type = "hidden" name = "cid" value ="<?php echo $course['patient_id']; ?>">
+        <button type="submit" class="btn btn-light">Assigned Nurse</button>
+      </form>
+   </td>
      <td>
         <?php 
   include "view-courses-editform.php";
@@ -47,12 +53,6 @@ while ($course = $courses->fetch_assoc()) {
         </button>
       </form>
     </td>
-    <td>
-      <form method="post" action="sections-by-course.php">
-        <input type = "hidden" name = "cid" value ="<?php echo $course['patient_id']; ?>">
-        <button type="submit" class="btn btn-light">Assigned Nurse</button>
-      </form>
-   </td>
   </tr>
   <?php
 }
