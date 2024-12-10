@@ -1,7 +1,7 @@
 html, body {
-  height: 100%; /* Ensures full height of the viewport */
-  margin: 0; /* Removes default margin */
-  background-color: #eaf4fc; /* Light blue background */
+  height: 100%;
+  margin: 0;
+  background-color: #eaf4fc; /* Matches your custom blue */
 }
 
 body{
