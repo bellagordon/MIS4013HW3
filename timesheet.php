@@ -47,4 +47,21 @@
   }
 
 </script>
-    <div id="example5.1" style="height: 400px; width: 100%;"></div>
+
+  
+ <style>
+      .bordered-container {
+        border: 2px solid black;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="bordered-container">
+      <div id="example5.1" style="height: 400px; width: 100%;"></div>
+    </div>
+  </body>
+</html>
