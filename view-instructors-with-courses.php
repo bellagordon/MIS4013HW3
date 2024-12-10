@@ -14,7 +14,7 @@
       <div class="card-body">
         <h5 class="card-title"><?php echo $instructor['doctor_name']; ?></h5>
         <p class="card-text">Office: <?php echo $instructor['office_number']; ?></p>
-        <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?php echo $instructor['doctor_id']; ?>" aria-expanded="false" aria-controls="collapse<?php echo $instructor['doctor_id']; ?>">
+        <button class="btn btn-light border border-info-subtle border-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?php echo $instructor['doctor_id']; ?>" aria-expanded="false" aria-controls="collapse<?php echo $instructor['doctor_id']; ?>">
           View Patients
         </button>
         <div class="collapse mt-3" id="collapse<?php echo $instructor['doctor_id']; ?>">
