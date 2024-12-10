@@ -4,7 +4,7 @@
 <div style="padding: 20px;">
       <div></div> <!-- Empty div to balance the layout -->
     <?php include "view-instructors-with-courses-newform.php"; ?>  
-  </div>
+  
    
  <?php while ($instructor = $instructors->fetch_assoc()) 
     {
