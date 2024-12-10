@@ -7,7 +7,7 @@ while ($courseItem = $courseList -> fetch_assoc()) {
     $selText =" selected";
   }
   ?>
-  <option value="<?php echo $courseItem['patient_id']; ?>"><?php echo $courseItem['patient_name']; ?></option>
+  <option value="<?php echo $courseItem['patient_id']; ?>" <?=$selText?>><?php echo $courseItem['patient_name']; ?></option>
   <?php
 }
 ?>
