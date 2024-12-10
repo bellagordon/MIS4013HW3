@@ -1,9 +1,8 @@
 
 <h1 class="text-center">All Records</h1>
 
-<!-- Container with blue background -->
 <div style="padding: 20px;">
-      <div></div> <!-- Empty div to balance the layout -->
+      <div></div> 
     <?php include "view-instructors-with-courses-newform.php"; ?>  
   
    
