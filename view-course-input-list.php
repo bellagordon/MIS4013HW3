@@ -2,7 +2,7 @@
 <select class="form-select" id="cid" name="cid">
 <?php 
 while ($courseItem = $courseList -> fetch_assoc()) {
-   $selText = "";
+  $selText = "";
   if ($selectedCourse == $courseItem['patient_id']) {
     $selText =" selected";
   }
@@ -13,4 +13,3 @@ while ($courseItem = $courseList -> fetch_assoc()) {
 ?>
   
 </select>
-
