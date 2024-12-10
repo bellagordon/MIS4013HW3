@@ -1,63 +1,55 @@
-<html>
-  <head>
+<html lang="en">
 
-        <link rel="stylesheet" href="style2.css">
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calendar</title>
+  <link rel="stylesheet" href="style2.css">
+  <script src="script.js" defer></script>
+</head>
 
-<div class="calendar-container">
-  <div class="calendar-header">
-    <h1>
-       November
-      <button>▾</button>
-    </h1>
-    <p>2018</p>
-  </div>
-  <div class="calendar"><span class="day-name">Mon</span><span class="day-name">Tue</span><span class="day-name">Wed</span><span class="day-name">Thu</span><span class="day-name">Fri</span><span class="day-name">Sat</span><span class="day-name">Sun</span>
-    <div class="day day--disabled">30</div>
-    <div class="day day--disabled">31</div>
-    <div class="day">1</div>
-    <div class="day">2</div>
-    <div class="day">3</div>
-    <div class="day">4</div>
-    <div class="day">5</div>
-    <div class="day">6</div>
-    <div class="day">7</div>
-    <div class="day">8</div>
-    <div class="day">9</div>
-    <div class="day">10</div>
-    <div class="day">11</div>
-    <div class="day">12</div>
-    <div class="day">13</div>
-    <div class="day">14</div>
-    <div class="day">15</div>
-    <div class="day">16</div>
-    <div class="day">17</div>
-    <div class="day">18</div>
-    <div class="day">19</div>
-    <div class="day">20</div>
-    <div class="day">21</div>
-    <div class="day">22</div>
-    <div class="day">23</div>
-    <div class="day">24</div>
-    <div class="day">25</div>
-    <div class="day">26</div>
-    <div class="day">27</div>
-    <div class="day">28</div>
-    <div class="day">29</div>
-    <div class="day">30</div>
-    <div class="day">31</div>
-    <div class="day day--disabled">1</div>
-    <div class="day day--disabled">2</div>
-    <section class="task task--warning">Projects</section>
-    <section class="task task--danger">Design Sprint</section>
-    <section class="task task--primary">Product Checkup 1
-      <div class="task__detail">
-        <h2>Product Checkup 1</h2>
-        <p>15-17th November</p>
+<body>
+  <div class="contianer">
+    <div class="calendar">
+      <div class="calendar-header">
+        <span class="month-picker" id="month-picker"> May </span>
+        <div class="year-picker" id="year-picker">
+          <span class="year-change" id="pre-year">
+            <pre><</pre>
+          </span>
+          <span id="year">2020 </span>
+          <span class="year-change" id="next-year">
+            <pre>></pre>
+          </span>
+        </div>
       </div>
-    </section>
-    <section class="task task--info">Product Checkup 2</section>
+
+      <div class="calendar-body">
+        <div class="calendar-week-days">
+          <div>Sun</div>
+          <div>Mon</div>
+          <div>Tue</div>
+          <div>Wed</div>
+          <div>Thu</div>
+          <div>Fri</div>
+          <div>Sat</div>
+        </div>
+        <div class="calendar-days">
+        </div>
+      </div>
+      <div class="calendar-footer">
+      </div>
+      <div class="date-time-formate">
+        <div class="day-text-formate">TODAY</div>
+        <div class="date-time-value">
+          <div class="time-formate">01:41:20</div>
+          <div class="date-formate">03 - march - 2022</div>
+        </div>
+      </div>
+      <div class="month-list"></div>
+    </div>
   </div>
-</div>
-  </body>
+</body>
+
 </html>
