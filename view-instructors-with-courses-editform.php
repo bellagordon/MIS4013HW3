@@ -15,7 +15,7 @@
       <div class="modal-body">
         <form method="post" action="">
           <div class="mb-3">
-            <label for="iid<?php echo $course['doctor_id']; ?>" class="form-label">Doctor</label>
+            <label for="iid <?php echo $course['doctor_id']; ?>" class="form-label">Doctor</label>
                 <?php 
                   $instructorList = selectInstructorsForInput();
                   $selectedInstructor = $course['doctor_id'];
@@ -23,7 +23,7 @@
                   ?>
           </div>
           <div class="mb-3">
-            <label for="cid<?php echo $course['doctor_id']; ?>" class="form-label">Patient</label>
+            <label for="cid <?php echo $course['doctor_id']; ?>" class="form-label">Patient</label>
                    <?php 
                   $courseList = selectCoursesForInput();
                   $selectedCourse = $course['patient_id'];
@@ -31,15 +31,15 @@
                   ?>          
           </div>
           <div class="mb-3">
-            <label for="sName<?php echo $course['doctor_id']; ?>" class="form-label">Nurse</label>
+            <label for="sName <?php echo $course['doctor_id']; ?>" class="form-label">Nurse</label>
             <input type="text" class="form-control" id="sName<?php echo $course['doctor_id']; ?>" name="sName" value="<?php echo $course['nurse_name']; ?>">
           </div>
           <div class="mb-3">
-            <label for="room<?php echo $course['doctor_id']; ?>" class="form-label">Room</label> <!-- Fixed typo -->
+            <label for="room <?php echo $course['doctor_id']; ?>" class="form-label">Room</label> <!-- Fixed typo -->
             <input type="text" class="form-control" id="room<?php echo $course['doctor_id']; ?>" name="room" value="<?php echo $course['room']; ?>"> <!-- Fixed typo -->
           </div>
           <div class="mb-3">
-            <label for="time<?php echo $course['doctor_id']; ?>" class="form-label">Day / Time</label>
+            <label for="time <?php echo $course['doctor_id']; ?>" class="form-label">Day / Time</label>
             <input type="text" class="form-control" id="time<?php echo $course['doctor_id']; ?>" name="time" value="<?php echo $course['day_time']; ?>">
           </div>
           <input type="hidden" name="sid" value="<?php echo $course['nurse_id']; ?>"> <!-- Added hidden input -->
