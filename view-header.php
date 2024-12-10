@@ -9,7 +9,6 @@
   </head>
   <body>
     <div class="container">
-      <div class="border border-info-subtle">
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="/">
@@ -42,5 +41,5 @@
     </div>
   </div>
 </nav>
-      </div>       
+           
 </div>
