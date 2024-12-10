@@ -1,6 +1,6 @@
 <h1>Previous Admittance Information</h1>
 <div class="table-responsive">
-  <table class="table table-striped table-bordered border border-info border-3 w-100">
+  <table class="table border border-info border-3 w-100">
     <thead>
       <tr>
         <th>Admittance Record ID</th>
