@@ -1,6 +1,6 @@
 <h1>Patients by Doctor</h1>
 <div class="table-responsive">
-  <table class="table">
+  <table class="table border border-info border-3 w-100">
     <thead>
       <tr>
         <th>Patient ID</th>
