@@ -4,7 +4,7 @@
 <div class="p-3 mb-2 bg-info text-dark bg-opacity-10" style="padding: 20px;">
   
   <!-- Add New Doctor Button -->
-  <div class="d-flex justify-content-between align-items-center mb-3" style="padding: 0 10px;">
+  <div class="d-flex justify-content-between align-items-center" style="padding: 0 10px;">
     <div></div> <!-- Empty div to balance the layout -->
     <?php include "view-instructors-with-courses-newform.php"; ?>  
   </div>
