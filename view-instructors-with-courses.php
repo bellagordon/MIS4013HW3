@@ -2,7 +2,7 @@
 
 <h1 class="text-center">All Records</h1>
 <?php include "view-instructors-with-courses-newform.php" ?>
-<div></div>
+<div class="card-group" style="max-width: 800px; border: 2px solid #17a2b8;">
   <?php
   while ($instructor = $instructors->fetch_assoc()) {
     ?>
@@ -48,6 +48,7 @@
     <?php
   }
   ?>
+
 
   <div class="d-flex justify-content-center mb-3">
   <div class="card">
