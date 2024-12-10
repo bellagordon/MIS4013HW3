@@ -3,6 +3,7 @@
   <table class="table">
     <thead>
       <tr>
+        <th>Admittance Record ID</th>
         <th>Nurse Name</th>
         <th>Doctor Name</th>
         <th>Room</th>
@@ -15,6 +16,7 @@
     while ($section = $sections->fetch_assoc()) {
   ?>
   <tr>
+    <td><?php echo $section['nurse_id']; ?></td>
     <td><?php echo $section['nurse_name']; ?></td>
     <td><?php echo $section['doctor_name']; ?></td>
     <td><?php echo $section['room']; ?></td>
