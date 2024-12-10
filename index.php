@@ -1,3 +1,4 @@
+
 <?php
 $pageTitle = "Home";
 include "view-header.php";
@@ -13,7 +14,7 @@ include "view-header.php";
     </div>   
   </div>
 </div>
-<div></div>
+<div class="w-100 p-3">
 <div class="border border-info-subtle border-3 rounded-end border-opacity-50">
   <div class="card text-center">
     <div class="card-header">
@@ -28,6 +29,7 @@ include "view-header.php";
       <h4 class="text-md-center">OR Schedule</h4>
     </div>
   </div>
+</div>
 </div>
 <?php
 include "timesheet.php";
