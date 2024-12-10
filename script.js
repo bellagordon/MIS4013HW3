@@ -1,7 +1,7 @@
 var today = new Date();
 var animDuration =1000,
 	min = 0, 
-	max=100;
+	max=500;
 
 d3.selection.prototype.moveToFront = function() {
   return this.each(function(){
