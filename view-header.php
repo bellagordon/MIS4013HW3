@@ -33,7 +33,7 @@
           <a class="nav-link" href="courses.php">Patients</a>
         </li>  
         <li class="nav-item">
-          <a class="nav-link" href="instructor-with-courses.php">Doctors with Patients</a>
+          <a class="nav-link" href="instructor-with-courses.php">All Records</a>
         </li>
          <li class="nav-item">
           <a class="nav-link" href="calender2.php">Calendar</a>
