@@ -54,7 +54,6 @@
     <?php
   }
   ?>
-</div>
 <div class="d-flex justify-content-center mb-3">
   <div class="card" style="width: 100%; max-width: 800px; border: none;">
     <div class="card-body">
@@ -62,3 +61,5 @@
     </div>
   </div>
 </div>
+</div>
+
