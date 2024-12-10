@@ -106,7 +106,7 @@ function clickedDay(d){
 
 	var boxData = $("#box-id-"+dateParser(d).toDateString().replaceAll(" ","")).data();
 	if(boxData.value !== undefined){
-		$("#calendar-click-info").text(prettyDate(boxData.date)+" has a value of "+boxData.value+" units");
+		$(" On "+("#calendar-click-info").text(prettyDate(boxData.date)+" , there were "+boxData.value+" patients admitted");
 	}
 	else{
 		$("#calendar-click-info").text("No information present for "+prettyDate(boxData.date));
