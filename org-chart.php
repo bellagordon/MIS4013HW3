@@ -21,7 +21,7 @@
            'Richard Webber', 'Chief Resident'],
           [{'v':'Owen Hunt', 'f':'Owen Hunt<div style="color:red; font-style:italic">Chief of Trauma</div>'},
            'Richard Webber', 'Trauma'],
-          [{'v':'Erica Hahn', 'f':'Erica Hahn<div style="color:red; font-style:italic">Chief of Cardiology</div>'},
+          [{'v':'Erica Hahn', 'f':'Erica Hahn<div style="color:red; font-style:italic">Chief of Cardiothoracics</div>'},
            'Richard Webber', 'Cardio'],
           [{'v':'Mark Sloan', 'f':'Mark Sloan<div style="color:red; font-style:italic">Head of Plastic Surgery</div>'},
            'Richard Webber', 'Plastics'],
