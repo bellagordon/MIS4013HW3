@@ -13,7 +13,7 @@
 
         // For each orgchart box, provide the name, manager, and tooltip to show.
         data.addRows([
-          [{'v':'Richard Webber', 'f':'Richard Webber<div style="color:red; font-style:italic">Chief of Surgery</div>'},
+          [{'v':'Richard Webber', 'f':'Richard Webber<div style="color:blue; font-style:bold">Chief of Surgery</div>'},
            '', 'Chief'],
           [{'v':'Derek Shepherd', 'f':'Derek Shepherd<div style="color:red; font-style:italic">Chief of Neurosurgery</div>'},
            'Richard Webber', 'Neuro'],
