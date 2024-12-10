@@ -13,6 +13,7 @@ include "view-header.php";
     </div>   
   </div>
 </div>
+<div></div>
 <div class="border border-info-subtle border-3 rounded-end border-opacity-50">
   <div class="card text-center">
     <div class="card-header">
