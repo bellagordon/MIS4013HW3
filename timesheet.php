@@ -17,9 +17,11 @@
     dataTable.addColumn({ type: 'date', id: 'Start' });
     dataTable.addColumn({ type: 'date', id: 'End' });
     dataTable.addRows([
+       [ 'Dr.Richard Webber', 'Coronary Artery Bypass', new Date(0,0,0,14,0,0),  new Date(0,0,0,18,0,0) ],
       [ 'Dr.Derek Shepherd', 'Craniotomy',             new Date(0,0,0,12,0,0),  new Date(0,0,0,14,30,0) ],
       [ 'Dr.Derek Shepherd', 'Tumor Removal',          new Date(0,0,0,14,45,0),  new Date(0,0,0,15,30,0) ],
       [ 'Dr.Meredith Grey', 'Clot Removal',            new Date(0,0,0,12,0,0),  new Date(0,0,0,13,0,0) ],
+       [ 'Dr.Meredith Grey', 'Hysterectomy',            new Date(0,0,0,14,0,0),  new Date(0,0,0,16,0,0) ],
        [ 'Dr.Miranda Bailey',   'Appendectomy',         new Date(0,0,0,13,30,0), new Date(0,0,0,15,0,0) ],
        [ 'Dr.Miranda Bailey',   'Hernia Repair',         new Date(0,0,0,16,0,0), new Date(0,0,0,18,0,0) ],
        [ 'Dr.Mark Sloan',   'Rhinoplasty',         new Date(0,0,0,13,0,0), new Date(0,0,0,16,0,0) ],
