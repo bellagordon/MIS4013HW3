@@ -10,7 +10,7 @@
  <?php while ($instructor = $instructors->fetch_assoc()) 
     {
    ?>
-      <div class="card border-info m-2" style="background-color: #ffffff;">
+      <div class="card border border-info border-2 m-2" style="background-color: #ffffff;">
       <div class="card-body">
         <h5 class="card-title"><?php echo $instructor['doctor_name']; ?></h5>
         <p class="card-text">Office: <?php echo $instructor['office_number']; ?></p>
