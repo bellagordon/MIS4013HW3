@@ -3,8 +3,8 @@
   <table class="table">
     <thead>
       <tr>
-        <th>ID</th>
-      <th>Number</th>
+        <th>Patient ID</th>
+      <th>Patient Name</th>
       <th>Description</th>
         <th>Nurse</th>
       <th>Doctor</th>
