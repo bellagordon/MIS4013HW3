@@ -4,13 +4,12 @@
 <!-- Container with blue background -->
 <div style="padding: 20px;">
       <div></div> <!-- Empty div to balance the layout -->
-    <?php include "view-instructors-with-courses-newform.php"; ?>  
-  
-   
- <?php while ($instructor = $instructors->fetch_assoc()) 
-    {
-   ?>
-    <div class="card border-info m-2" style="background-color: #ffffff;">
+<?php include "view-instructors-with-courses-newform.php" ?>
+<div class="card-group" style="max-width: 800px; border: 2px solid #17a2b8; background-color: rgba(0, 123, 255, 0.1);">
+  <?php
+  while ($instructor = $instructors->fetch_assoc()) {
+    ?>
+  <div class="card border-info m-2" style="background-color: #ffffff;">
       <div class="card-body">
         <h5 class="card-title"><?php echo $instructor['doctor_name']; ?></h5>
         <p class="card-text">Office: <?php echo $instructor['office_number']; ?></p>
@@ -49,6 +48,7 @@
         </div>
       </div>
     </div>
+</div>
     <?php
   }
   ?>
