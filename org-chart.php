@@ -31,6 +31,8 @@
            'Richard Webber', 'Ortho'],
           [{'v':'Christina Yang', 'f':'Christina Yang<div style="color:red; font-style:italic">Head Cardiologist</div>'},
            'Erica Hahn', 'Cardio'],
+          [{'v':'April Kepner', 'f':'April Kepner<div style="color:red; font-style:italic">Trauma Surgeon</div>'},
+           'Owen Hunt', 'Trauma'],
           [{'v':'Meredith Grey', 'f':'Meredith Grey<div style="color:red; font-style:italic">Attending General Surgeon</div>'},
            'Miranda Bailey', 'Gen'],
            [{'v':'Alex Karev', 'f':'Alex Karev<div style="color:red; font-style:italic">Attending Pediactric Surgeon</div>'},
