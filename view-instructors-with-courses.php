@@ -22,12 +22,12 @@
        </button>
        <div class="collapse mt-3" id="collapse<?php echo $instructor['doctor_id']; ?>">
          <div class="card card-body">
-           <ul class="list-group d-flex justify-content-between align-items-center">
+           <ul class="list-group">
              <?php
              $courses = selectCoursesByInstructor($instructor['doctor_id']);
              while ($course = $courses->fetch_assoc()) {
                ?>
-           <li class="list-group-item">
+           <li class="list-group-item d-flex justify-content-between align-items-center">
                  <span>
                    <?php echo $course['patient_name']; ?> - <?php echo $course['room']; ?> - <?php echo $course['day_time']; ?>
                  </span>
@@ -36,7 +36,7 @@
                    <?php include "view-instructors-with-courses-editform.php"; ?>  
                </span>    
                 </li>
-                <li class ="list-group-item">
+                <li>
                    <form method="post" action="">
                                <input type="hidden" name="sid" value="<?php echo $course['nurse_id']; ?>">
                                <input type = "hidden" name ="actionType" value = "Delete">
