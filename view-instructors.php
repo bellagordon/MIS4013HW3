@@ -33,7 +33,7 @@ while ($instructor = $instructors->fetch_assoc()) {
     <td><?php echo $instructor['doctor_id']; ?></td>
     <td><?php echo $instructor['doctor_name']; ?></td>
     <td><?php echo $instructor['office_number']; ?></td>
-     <td><a href="courses-by-instructor.php?iid=<?php echo $instructor['doctor_id']; ?>">All Patients</a></td>
+     <td><a href="courses-by-instructor.php?iid=<?php echo $instructor['doctor_id']; ?>">View Patients</a></td>
     <td>
         <?php 
   include "view-instructors-editform.php";
