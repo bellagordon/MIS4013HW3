@@ -35,6 +35,8 @@
                <span>
                    <?php include "view-instructors-with-courses-editform.php"; ?>  
                </span>    
+                </li>
+                <li>
                    <form method="post" action="">
                                <input type="hidden" name="sid" value="<?php echo $course['nurse_id']; ?>">
                                <input type = "hidden" name ="actionType" value = "Delete">
@@ -44,8 +46,6 @@
                                </svg>
                                </button>
                        </form> 
-
-               
                </li>
 
                      
