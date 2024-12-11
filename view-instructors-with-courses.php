@@ -27,13 +27,13 @@
              $courses = selectCoursesByInstructor($instructor['doctor_id']);
              while ($course = $courses->fetch_assoc()) {
                ?>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
+                <li class="list-group-item">
                  <span>
                    <?php echo $course['patient_name']; ?> - <?php echo $course['room']; ?> - <?php echo $course['day_time']; ?>
                  </span>
-                 <span class="d-flex gap-2">
+                 
                    <?php include "view-instructors-with-courses-editform.php"; ?>  
-               <span>
+                    
                    <form method="post" action="">
                                <input type="hidden" name="sid" value="<?php echo $course['nurse_id']; ?>">
                                <input type = "hidden" name ="actionType" value = "Delete">
@@ -44,8 +44,7 @@
                                </button>
                        </form> 
 
-               </span>
-                 </span>
+               
                </li>
 
                      
