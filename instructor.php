@@ -16,7 +16,7 @@ if (isset($_POST['actionType'])) {
       }
       break;
      case "Edit":
-      if (editInstructor($_POST['iName'], $_POST['iNum'], $_POST['iid'], $_POST['cid'])) {
+      if (editInstructor($_POST['iName'], $_POST['iNum'], $_POST['iid'])) {
         echo '<div class="alert alert-success" role="alert"> Doctor edited! </div>';
       } else {
          echo '<div class="alert alert-danger" role="alert"> Error </div>';
