@@ -27,12 +27,10 @@
               while ($course = $courses->fetch_assoc()) {
                 ?>
          <li>
-                   <span>
                             <?php echo $course['patient_name']; ?> - <?php echo $course['room']; ?> - <?php echo $course['day_time']; ?>
-                          </span>
-                          <span class="d-flex gap-2">
+                        
                             <?php include "view-instructors-with-courses-editform.php"; ?>  
-                          </span>
+                        
             </li>
                    <li>
                  <form method="post" action="">
