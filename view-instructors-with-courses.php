@@ -31,7 +31,11 @@
                    </span>
                           <span class="d-flex gap-2">
                             <?php include "view-instructors-with-courses-editform.php"; ?>  
-                                 <form method="post" action="">
+                                
+                          </span>
+            </li>
+            <li>
+                   <form method="post" action="">
                                       <input type="hidden" name="sid" value="<?php echo $course['nurse_id']; ?>">
                                       <input type = "hidden" name ="actionType" value = "Delete">
                                       <button type="submit" class="btn btn-outline-info" onclick= "return confirm('Are you sure?');">
@@ -40,9 +44,7 @@
                                       </svg>
                                       </button>
                              </form>
-                          </span>
-            </li>
-                       
+            </li>  
                 <?php
               }
               ?>
